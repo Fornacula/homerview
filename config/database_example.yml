@@ -3,8 +3,6 @@ default: &default
   encoding: unicode
   host: localhost
   pool: 5
-  username: homer
-  password: Bart51mp50n
   timeout: 5000
 
 development:
