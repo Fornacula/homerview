@@ -1,0 +1,19 @@
+current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/byebug-9.1.0/ext/byebug
+/home/vonehrenpreis/.rvm/rubies/ruby-2.4.2/bin/ruby -r ./siteconf20171214-25913-1hekwpp.rb extconf.rb
+creating Makefile
+
+current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/byebug-9.1.0/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/byebug-9.1.0/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/byebug-9.1.0/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20171214-25913-122rjnb/byebug
