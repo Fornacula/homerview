@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'coffee-rails'
+
+gem 'devise'
+gem 'foundation-rails'
 # For building JSON APIs
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
