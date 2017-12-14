@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'coffee-rails'
-
 gem 'devise'
 gem 'foundation-rails'
 # For building JSON APIs
