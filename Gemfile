@@ -18,6 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'bcrypt', '~> 3.1.7'
 group :development, :test do
   gem 'factory_bot_rails', '~> 4.0'
+  gem 'faker'
   gem 'pry-byebug'
   gem 'rspec'
   gem 'rspec-rails'
