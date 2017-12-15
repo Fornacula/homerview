@@ -1,4 +1,12 @@
 en:
   general:
-    login: 'Log in'
-    logout: 'Log out'
+    login: Log in
+    logout: Log out
+    titles:
+      services_list: Added services
+      users_list: Registered users
+  services:
+    name: Name
+  users:
+    email: e-mail
+    created_at: Created at

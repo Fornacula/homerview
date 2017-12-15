@@ -1,0 +1,12 @@
+en:
+  general:
+    login: Logi sisse
+    logout: Logi välja
+    titles:
+      services_list: Lisatud teenused
+      users_list: Registreerunud kasutajad
+  services:
+    name: Nimi
+  users:
+    email: e-mail
+    created_at: Loodud
