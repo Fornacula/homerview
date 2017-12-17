@@ -5,8 +5,15 @@ en:
     titles:
       services_list: Added services
       users_list: Registered users
+      invoices_list: Registreeritud arved
   services:
+    title: Service
     name: Name
   users:
+    title: User
     email: e-mail
     created_at: Created at
+  invoices:
+    title: Invoice
+    price: Price
+    comment: Comment

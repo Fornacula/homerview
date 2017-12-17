@@ -5,8 +5,15 @@ en:
     titles:
       services_list: Lisatud teenused
       users_list: Registreerunud kasutajad
+      invoices_list: Registered invoices
   services:
+    title: Teenus
     name: Nimi
   users:
+    title: Kasutaja
     email: e-mail
     created_at: Loodud
+  invoices:
+    title: Arve
+    price: Maksumus
+    comment: Kommentaar
