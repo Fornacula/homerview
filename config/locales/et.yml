@@ -4,6 +4,9 @@ et:
     login: Logi sisse
     logout: Logi välja
     titles:
+      invoices: Arved
+      services: Teenused
+      users: Kasutajad
       services_list: Lisatud teenused
       users_list: Registreerunud kasutajad
       invoices_list: Registered invoices

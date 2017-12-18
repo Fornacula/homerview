@@ -4,6 +4,9 @@ en:
     login: Log in
     logout: Log out
     titles:
+      invoices: Invoices
+      services: Services
+      users: Users
       services_list: Added services
       users_list: Registered users
       invoices_list: Registreeritud arved
