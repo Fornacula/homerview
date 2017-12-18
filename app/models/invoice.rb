@@ -4,4 +4,5 @@ class Invoice < ApplicationRecord
 
   validates :service, presence: true
   validates :user, presence: true
+  validates :price, presence: true
 end
