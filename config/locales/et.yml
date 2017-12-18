@@ -15,5 +15,6 @@ en:
     created_at: Loodud
   invoices:
     title: Arve
+    invoice_nr: Arvenumber
     price: Maksumus
     comment: Kommentaar

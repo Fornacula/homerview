@@ -15,5 +15,6 @@ en:
     created_at: Created at
   invoices:
     title: Invoice
+    invoice_nr: Invoice nr
     price: Price
     comment: Comment
