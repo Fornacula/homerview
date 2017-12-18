@@ -33,5 +33,5 @@ body {
   left: 50%;
   padding: 3rem;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 1.0);
 }
