@@ -1,4 +1,25 @@
 en:
   general:
-    login: 'Log in'
-    logout: 'Log out'
+    home: Homerview
+    login: Log in
+    logout: Log out
+    titles:
+      invoices: Invoices
+      services: Services
+      users: Users
+      services_list: Added services
+      users_list: Registered users
+      invoices_list: Registreeritud arved
+  services:
+    title: Service
+    name: Name
+  users:
+    title: User
+    email: e-mail
+    created_at: Created at
+  invoices:
+    title: Invoice
+    invoice_nr: Invoice nr
+    price: Price
+    comment: Comment
+    none_found: No invoices were found

@@ -11,6 +11,8 @@ gem 'rails', '5.1.4'
 gem 'sass-rails', '~> 5.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'simple_form'
+gem 'slim-rails'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 

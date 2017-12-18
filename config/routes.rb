@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root to: 'users#index'
+  scope "(:locale)", locale: /en|et/ do
+    devise_for :users
+    root to: 'users#index'
+    resources :services
+    resources :invoices
+  end
 end

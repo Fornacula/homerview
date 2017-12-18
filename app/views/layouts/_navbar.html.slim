@@ -1,0 +1,26 @@
+nav.top-bar data-topbar="" role="navigation"
+  ul.title-area
+    li.name
+      h1= link_to t('general.home'), '#'
+    li.toggle-topbar.menu-icon
+      a href="#"
+        span Menu
+  section.top-bar-section
+    /! Left Nav Section
+    ul.left
+      li= link_to t('general.titles.users'), "/"
+      li= link_to t('general.titles.services'), services_path
+      li= link_to t('general.titles.invoices'), invoices_path
+    /! Right Nav Section
+    ul.right
+      li.active
+        a href="#"  Right Button Active
+      li.has-dropdown
+        a href="#"  Right Button Dropdown
+        ul.dropdown
+          li
+            a href="#"  First link in dropdown
+          li.active
+            a href="#"  Active link in dropdown
+      - if user_signed_in?
+        li= link_to t('general.logout'), destroy_user_session_path, method: :delete
