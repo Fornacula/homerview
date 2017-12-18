@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    meta charset='utf-8' name='viewport' content='width=device-width, initial-scale=1.0'
+    title= content_for?(:title) ? yield(:title) : Homerview
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'vendor/modernizr', 'data-turbolinks-track': 'reload'
+    = csrf_meta_tags
+  body
+    = render 'layouts/navbar'
+    p.notice= notice
+    p.alert= alert
+    = yield
+    = javascript_include_tag 'application'
