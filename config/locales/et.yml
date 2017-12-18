@@ -1,5 +1,6 @@
-en:
+et:
   general:
+    home: Koduvaade
     login: Logi sisse
     logout: Logi välja
     titles:
@@ -18,3 +19,4 @@ en:
     invoice_nr: Arvenumber
     price: Maksumus
     comment: Kommentaar
+    none_found: Arved puuduvad

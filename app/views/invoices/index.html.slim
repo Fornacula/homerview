@@ -1,16 +1,19 @@
 h1 = t('general.titles.invoices_list')
-table
-  th
-  th= t('services.title')
-  th= t('users.title')
-  th= t('invoices.price')
-  th= t('invoices.comment')
-  - c = 1
-  - @invoices.each do |i|
-    tr
-      td= c
-      td= i.service.name
-      td= i.user.email
-      th= i.price
-      th= i.comment
-    - c += 1
+- if @invoices.present?
+  table.center-table
+    th
+    th= t('services.title')
+    th= t('users.title')
+    th= t('invoices.price')
+    th= t('invoices.comment')
+    - c = 1
+    - @invoices.each do |i|
+      tr
+        td= c
+        td= i.service.name
+        td= i.user.email
+        th= i.price
+        th= i.comment
+      - c += 1
+- else
+  h3= t('invoices.none_found')
