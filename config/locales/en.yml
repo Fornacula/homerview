@@ -5,11 +5,12 @@ en:
     logout: Log out
     titles:
       invoices: Invoices
+      new_invoice: New invoice
       services: Services
       users: Users
       services_list: Added services
       users_list: Registered users
-      invoices_list: Registreeritud arved
+      invoices_list: Created invoices
   services:
     title: Service
     name: Name
@@ -23,3 +24,6 @@ en:
     price: Price
     comment: Comment
     none_found: No invoices were found
+    select_service: Pick service
+    successful_save: Invoice created
+    new: New invoice

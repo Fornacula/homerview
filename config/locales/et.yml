@@ -5,11 +5,12 @@ et:
     logout: Logi välja
     titles:
       invoices: Arved
+      new_invoice: Uus arve
       services: Teenused
       users: Kasutajad
       services_list: Lisatud teenused
       users_list: Registreerunud kasutajad
-      invoices_list: Registered invoices
+      invoices_list: Loodud arved
   services:
     title: Teenus
     name: Nimi
@@ -23,3 +24,6 @@ et:
     price: Maksumus
     comment: Kommentaar
     none_found: Arved puuduvad
+    select_service: Vali teenus
+    successful_save: Arve loodud
+    new: Uus arve
