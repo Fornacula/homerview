@@ -21,7 +21,7 @@ html, body {
 }
 
 html {
-  background: url(/assets/bg_tile.jpg);
+  background: url(bg_tile.jpg);
   display: table;
   margin: auto;
 }
