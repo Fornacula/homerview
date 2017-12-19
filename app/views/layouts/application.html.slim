@@ -11,7 +11,7 @@ html
       = render 'layouts/navbar'
     - else
       .center
-        h1 Homerview
+        h1= t('general.home')
     - if notice
       p.alert-box.info= notice
     - if alert
