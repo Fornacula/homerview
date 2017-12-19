@@ -7,8 +7,14 @@ html
     = javascript_include_tag 'vendor/modernizr', 'data-turbolinks-track': 'reload'
     = csrf_meta_tags
   body
-    = render 'layouts/navbar'
-    p.notice= notice
-    p.alert= alert
+    - if user_signed_in?
+      = render 'layouts/navbar'
+    - else
+      .center
+        h1 Homerview
+    - if notice
+      p.alert-box.info= notice
+    - if alert
+      p.alert-box.alert= alert
     = yield
     = javascript_include_tag 'application'

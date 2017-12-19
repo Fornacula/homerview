@@ -35,3 +35,17 @@ body {
   transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, 1.0);
 }
+
+.center-aligned {
+  margin: auto;
+  width: 50%;
+}
+
+.center {
+  text-align: center;
+}
+
+.box {
+  border: 1px solid #cacaca;
+  border-radius: 15px;
+  padding: 2rem;
