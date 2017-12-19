@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'brakeman'
 gem 'coffee-rails'
 gem 'devise'
 gem 'foundation-rails'
