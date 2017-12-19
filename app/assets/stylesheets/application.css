@@ -21,7 +21,7 @@ html, body {
 }
 
 html {
-  background: url(/assets/bg_tile.jpg);
+  background: url(bg_tile.jpg);
   display: table;
   margin: auto;
 }
@@ -49,3 +49,4 @@ body {
   border: 1px solid #cacaca;
   border-radius: 15px;
   padding: 2rem;
+}
