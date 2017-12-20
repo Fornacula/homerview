@@ -4,17 +4,19 @@ html
     meta charset='utf-8' name='viewport' content='width=device-width, initial-scale=1.0'
     title= content_for?(:title) ? yield(:title) : Homerview
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'vendor/modernizr', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'vendor/modernizr', 'application', 'data-turbolinks-track': 'reload'
     = csrf_meta_tags
   body
     - if user_signed_in?
       = render 'layouts/navbar'
+      = render 'layouts/messages'
+      = yield
     - else
       .center
-        h1 Homerview
-    - if notice
-      p.alert-box.info= notice
-    - if alert
-      p.alert-box.alert= alert
-    = yield
-    = javascript_include_tag 'application'
+        h1= t('general.home')
+      = render 'layouts/messages'
+      .row
+        .column
+        .column.small-offset-0.small-12.medium-offset-1.medium-10.large-offset-3.large-6
+          = yield
+        .column
