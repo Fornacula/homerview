@@ -7,15 +7,21 @@ en:
       invoices: Invoices
       new_invoice: New invoice
       services: Services
+      new_service: New service
       users: Users
-      services_list: Added services
+      services_list: Your services
       users_list: Registered users
       invoices_list: Created invoices
     buttons:
+      show: Show
       destroy: Remove
   services:
     title: Service
     name: Name
+    none_found: You haven't added any services yet
+    new: New service
+    successful_save: Service added
+    successful_destroy: Service removed!
   users:
     title: User
     email: e-mail

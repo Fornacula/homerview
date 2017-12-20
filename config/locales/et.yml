@@ -7,15 +7,21 @@ et:
       invoices: Arved
       new_invoice: Uus arve
       services: Teenused
+      new_service: Uus teenus
       users: Kasutajad
-      services_list: Lisatud teenused
+      services_list: Sinu teenused
       users_list: Registreerunud kasutajad
       invoices_list: Loodud arved
     buttons:
+      show: Näita
       destroy: Eemalda
   services:
     title: Teenus
     name: Nimi
+    none_found: Sa ei ole veel ühtegi teenust lisanud
+    new: Uus teenus
+    successful_save: Teenus lisatud
+    successful_destroy: Teenus eemaldatud!
   users:
     title: Kasutaja
     email: e-mail
