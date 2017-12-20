@@ -11,6 +11,8 @@ et:
       services_list: Lisatud teenused
       users_list: Registreerunud kasutajad
       invoices_list: Loodud arved
+    buttons:
+      destroy: Eemalda
   services:
     title: Teenus
     name: Nimi
@@ -26,4 +28,5 @@ et:
     none_found: Arved puuduvad
     select_service: Vali teenus
     successful_save: Arve loodud
+    successful_destroy: Arve eemaldatud!
     new: Uus arve
