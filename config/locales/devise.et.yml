@@ -1,0 +1,63 @@
+et:
+  errors:
+    messages:
+      already_confirmed: "on juba kinnitatud, proovi sisse logida"
+      confirmation_period_expired: "tuleb kinnitada %{period} jooksul, palun proovi uuesti"
+      expired: "on aegunud, palun küsi uus"
+      not_found: "ei leitud"
+      not_locked: "ei olnud lukus"
+      not_saved:
+        one: "1 viga takistas salvestamast objekti %{resource}:"
+        other: "%{count} viga takistasid salvestamast objekti %{resource}:"
+  devise:
+    confirmations:
+      confirmed: 'Sinu konto on edukalt kinnitatud, oled nüüd sisse logitud.'
+      send_instructions: 'Mõne minuti jooksul saad sa e-kirja juhistega oma konto kinnitamiseks.'
+      send_paranoid_instructions: 'Kui su e-post on meie andmebaasis, saad varsti e-kirja juhistega, kuidas oma konto kinnitada.'
+    failure:
+      already_authenticated: 'Oled juba sisse loginud.'
+      inactive: 'Sinu konto polnud veel aktiveeritud.'
+      invalid: 'Vigane epost või salasõna.'
+      locked: 'Sinu konto lukustati.'
+      last_attempt: 'Sul on jäänud järele 1 katse. Selle ebaõnnestumisel konto lukustatakse.'
+      not_found_in_database: 'Vale %{authentication_keys} või salasõna.'
+      timeout: 'Sinu sessioon on aegunud, jätkamiseks logi palun sisse.'
+      unauthenticated: 'Enne jätkamist pead sa sisse logima või registreeruma.'
+      unconfirmed: 'Enne jätkamist pead sa oma konto kinnitama.'
+      invalid_token: 'Vigane tähis.'
+    mailer:
+      confirmation_instructions:
+        subject: 'Kinnitamise juhised'
+      reset_password_instructions:
+        subject: 'Parooli taastamise juhised'
+      unlock_instructions:
+        subject: 'Lukust vabastamise juhised'
+      email_changed:
+        subject: 'E-posti aadress muudetud'
+      password_change:
+        subject: 'Salasõna muudetud'
+    omniauth_callbacks:
+      failure: 'Ei õnnestunud %{kind} kontot autoriseerida, põhjus: \"%{reason}\".'
+      success: 'Konto %{kind} edukalt autoriseeritud.'
+    passwords:
+      no_token: 'Seda lehte ei saa külastada mujalt kui parooli taastamise e-kirjast. Kui tuled parooli taastamise e-kirjast, palun kontrolli, et kasutasid täielikku URLi.'
+      send_instructions: 'Mõne minuti jooksul saad sa kirja juhistega, kuidas oma parooli taastada.'
+      send_paranoid_instructions: 'Kui su e-post on meie andmebaasis, saad varsti e-kirja parooli taastamise juhistega.'
+      updated: 'Salasõna vahetamine õnnestus. Oled sisse logitud.'
+      updated_not_active: 'Salasõna vahetamine õnnestus.'
+    registrations:
+      destroyed: 'Sinu konto on deaktiveeritud.'
+      signed_up: 'Tere tulemast! Registreerumine õnnestus!'
+      signed_up_but_inactive: 'Registreerumine õnnestus. Siiski ei saa me sind sisse logida, sest su konto pole veel aktiveeritud.'
+      signed_up_but_locked: 'Registreerumine õnnestus. Siiski ei saa me sind sisse logida, sest su konto on lukus.'
+      signed_up_but_unconfirmed: 'Kiri kinnituslingiga on saadetud sinu e-posti aadressile. Palun ava sealolev link oma konto kinnitamiseks.'
+      update_needs_confirmation: 'Konto uuendamine õnnestus, kuid me peame kontrollima sinu e-postiaadressi. Palun ava oma postkastis meie saadetud kiri ja sealolev link, et viia lõpule e-postiaadressi kinnitamine.'
+      updated: 'Konto uuendamine õnnestus.'
+    sessions:
+      signed_in: 'Sisselogimine õnnestus.'
+      signed_out: 'Väljalogimine õnnestus.'
+      already_signed_out: 'Oled juba väljalogitud.'
+    unlocks:
+      send_instructions: 'Sa saad mõne minuti jooksul e-kirja juhistega, kuidas oma konto lahti lukustadad.'
+      send_paranoid_instructions: 'Kui su konto eksisteerib, saad sa mõne minuti jooksul e-kirja juhistega, kuidas oma konto lahti lukustada.'
+      unlocked: 'Sinu konto on lahti lukustatud. Jätkamiseks palun logi sisse.'
