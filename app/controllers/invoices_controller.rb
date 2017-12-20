@@ -11,7 +11,7 @@ class InvoicesController < ApplicationController
     if @invoice.save
       redirect_to invoices_path, notice: t('invoices.successful_save')
     else
-      redirect_to invoices_path, alert: @invoice.errors.full_messages.join(', ')
+      redirect_to new_invoice_path, alert: @invoice.errors.full_messages.join(', ')
     end
   end
 
