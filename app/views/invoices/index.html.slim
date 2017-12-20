@@ -1,21 +1,24 @@
 h1 = t('general.titles.invoices_list')
 - if @invoices.present?
-  table.center-table
+  table
     th
     th= t('services.title')
     th= t('users.title')
     th= t('invoices.price')
     th= t('invoices.comment')
+    th
     - c = 1
     - @invoices.each do |i|
       tr
         td= c
         td= i.service.name
         td= i.user.email
-        th= i.price
-        th= i.comment
+        td= i.price
+        td= i.comment
+        td= link_to invoice_path(i), method: :delete do
+          button.tiny.alert= t('general.buttons.destroy')
       - c += 1
 - else
   h3= t('invoices.none_found')
 
-a.button.success.round(href="#{new_invoice_path}")= t('invoices.new')
+a.button.success.small(href="#{new_invoice_path}")= t('invoices.new')

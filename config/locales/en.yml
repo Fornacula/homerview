@@ -11,6 +11,8 @@ en:
       services_list: Added services
       users_list: Registered users
       invoices_list: Created invoices
+    buttons:
+      destroy: Remove
   services:
     title: Service
     name: Name
@@ -26,4 +28,5 @@ en:
     none_found: No invoices were found
     select_service: Pick service
     successful_save: Invoice created
+    successful_destroy: Invoice removed!
     new: New invoice

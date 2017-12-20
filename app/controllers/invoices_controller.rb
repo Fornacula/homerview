@@ -1,5 +1,6 @@
 class InvoicesController < ApplicationController
 
+  before_action :set_invoice, only: [:destroy]
   before_action :set_services, only: [:new]
 
   def new; end
@@ -9,6 +10,14 @@ class InvoicesController < ApplicationController
     @invoice.user = current_user
     if @invoice.save
       redirect_to invoices_path, notice: t('invoices.successful_save')
+    else
+      redirect_to invoices_path, alert: @invoice.errors.full_messages.join(', ')
+    end
+  end
+
+  def destroy
+    if @invoice.destroy
+      redirect_to invoices_path, notice: t('invoices.successful_destroy')
     else
       redirect_to invoices_path, alert: @invoice.errors.full_messages.join(', ')
     end
@@ -24,6 +33,10 @@ class InvoicesController < ApplicationController
     params.require(:invoice).permit(
       :invoice_nr, :service_id, :user_id, :price, :comment
     )
+  end
+
+  def set_invoice
+    @invoice = Invoice.find(params[:id])
   end
 
   def set_services
