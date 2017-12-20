@@ -8,8 +8,12 @@ nav.top-bar role='navigation'
     ul.left
       li.divider
       li= link_to t('general.titles.users'), '/'
+      li.divider
       li= link_to t('general.titles.services'), services_path
+      li.divider
       li= link_to t('general.titles.invoices'), invoices_path
-    /! Right Nav Section
-    ul.right
-      li= link_to t('general.logout'), destroy_user_session_path, method: :delete
+
+  /! Right Nav Section
+  ul.right
+    li= link_to destroy_user_session_path, method: :delete do
+      i.medium.fi-power

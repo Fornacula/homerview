@@ -3,6 +3,10 @@
 }
 
 i {
-  margin: 1.5rem;
+  margin: 1rem;
   color: #FFF;
+}
+
+.top-bar-section ul li > a {
+  font-size: 1.2rem;
 }

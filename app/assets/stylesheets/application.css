@@ -13,8 +13,25 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
-
  */
+
+@media only screen and (max-width: 40em) { /* small */
+  body{
+    padding: 1rem;
+  }
+}
+@media only screen and (min-width: 40.063em) { /* medium */
+  body {
+    padding: 2rem;
+  }
+}
+@media only screen and (min-width: 64.063em) { /* large */
+  body {
+    padding: 3rem;
+    padding-top: 2rem;
+  }
+}
+
 html, body {
   height: 100%;
   width: 80%;
@@ -35,22 +52,6 @@ body {
   background: rgba(255, 255, 255, 1.0);
 }
 
-@media only screen and (max-width: 40em) { /* small */
-  body{
-    padding: 1rem;
-  }
-}
-@media only screen and (min-width: 40.063em) { /* medium */
-  body {
-    padding: 2rem;
-  }
-}
-@media only screen and (min-width: 64.063em) { /* large */
-  body {
-    padding: 3rem;
-  }
-}
-
 .center-aligned {
   margin: auto;
   width: 50%;
@@ -66,10 +67,10 @@ body {
   padding: 2rem;
 }
 
-i.medium{
-  font-size: 1.5rem;
+i.medium {
+  font-size: 1.8rem;
 }
 
-i.large{
+i.large {
   font-size: 2rem;
 }
