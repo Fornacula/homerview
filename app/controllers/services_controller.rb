@@ -1,6 +1,6 @@
 class ServicesController < ApplicationController
 
-  before_action :set_service, only: [:show, :destroy]
+  before_action :set_service, only: [:show, :edit, :update, :destroy]
 
   def new; end
 
@@ -14,6 +14,16 @@ class ServicesController < ApplicationController
   end
 
   def show; end
+
+  def edit; end
+
+  def update
+    if @service.update(service_params)
+      redirect_to services_path, notice: t('services.successful_update')
+    else
+      redirect_to new_service_path, alert: @service.errors.full_messages.join(', ')
+    end
+  end
 
   def destroy
     if @service.destroy
