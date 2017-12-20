@@ -12,9 +12,13 @@ et:
       services_list: Sinu teenused
       users_list: Registreerunud kasutajad
       invoices_list: Loodud arved
+    attributes:
+      created_at: Loodud
+      updated_at: Viimati uuendatud
     buttons:
       show: Näita
       destroy: Eemalda
+      back_to_services: Tagasi teenuste loetellu
   services:
     title: Teenus
     name: Nimi
@@ -36,3 +40,30 @@ et:
     successful_save: Arve loodud
     successful_destroy: Arve eemaldatud!
     new: Uus arve
+
+  date:
+    formats:
+      day_names:
+      - esmaspäev
+      - teisipäev
+      - kolmapäev
+      - neljapäev
+      - reede
+      - laupäev
+      - pühapäev
+    month_names:
+      - jaanuar
+      - veebruar
+      - märts
+      - aprill
+      - mai
+      - juuni
+      - juuli
+      - august
+      - september
+      - oktoober
+      - november
+      - detsember
+  time:
+    formats:
+      default: '%e.%-m.%Y, %H:%M'

@@ -4,7 +4,6 @@ h1 = t('general.titles.services_list')
     th
     th= t('services.name')
     th
-    th
     - c = 1
     - @services.each do |s|
       tr
@@ -12,8 +11,6 @@ h1 = t('general.titles.services_list')
         td= s.name
         td= link_to service_path(s) do
           button.tiny.success= t('general.buttons.show')
-        td= link_to service_path(s), method: :delete, data: {confirmation: "Are  you sure?"} do
-          button.tiny.alert= t('general.buttons.destroy')
       - c += 1
 - else
   h4= t('services.none_found')

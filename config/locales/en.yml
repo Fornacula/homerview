@@ -12,9 +12,13 @@ en:
       services_list: Your services
       users_list: Registered users
       invoices_list: Created invoices
+    attributes:
+      created_at: Created at
+      updated_at: Last updated
     buttons:
       show: Show
       destroy: Remove
+      back_to_services: Back to services
   services:
     title: Service
     name: Name
@@ -36,3 +40,7 @@ en:
     successful_save: Invoice created
     successful_destroy: Invoice removed!
     new: New invoice
+
+  time:
+    formats:
+      default: '%e. %b %Y, %H:%M'
