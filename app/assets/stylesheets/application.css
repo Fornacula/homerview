@@ -31,9 +31,24 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 3rem;
   transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, 1.0);
+}
+
+@media only screen and (max-width: 40em) { /* small */
+  body{
+    padding: 1rem;
+  }
+}
+@media only screen and (min-width: 40.063em) { /* medium */
+  body {
+    padding: 2rem;
+  }
+}
+@media only screen and (min-width: 64.063em) { /* large */
+  body {
+    padding: 3rem;
+  }
 }
 
 .center-aligned {
