@@ -1,7 +1,8 @@
 nav.top-bar role='navigation'
   ul.title-area
-    li.name
-      h1= link_to t('general.home'), '#'
+    li= link_to '#' do
+      i.large.fi-home
+
   section.top-bar-section
     /! Left Nav Section
     ul.left
@@ -11,13 +12,4 @@ nav.top-bar role='navigation'
       li= link_to t('general.titles.invoices'), invoices_path
     /! Right Nav Section
     ul.right
-      li.active
-        a href='#'  Right Button Active
-      li.has-dropdown
-        a href='#'  Right Button Dropdown
-        ul.dropdown
-          li
-            a href='#'  First link in dropdown
-          li.active
-            a href='#'  Active link in dropdown
       li= link_to t('general.logout'), destroy_user_session_path, method: :delete

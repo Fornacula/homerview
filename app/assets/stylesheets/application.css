@@ -65,3 +65,11 @@ body {
   border-radius: 15px;
   padding: 2rem;
 }
+
+i.medium{
+  font-size: 1.5rem;
+}
+
+i.large{
+  font-size: 2rem;
+}
