@@ -1,10 +1,11 @@
 = simple_form_for invoice do |f|
-  = f.input :invoice_nr
+  = f.input :invoice_nr, label: t('invoices.invoice_nr')
   = f.association :service,
+            label: t('services.title'),
             collection: services,
             prompt: t('invoices.select_service'),
             group_label_method: :name,
             group_method: :id
-  = f.input :price
-  = f.input :comment
-  = f.button :submit
+  = f.input :price, label: t('invoices.price')
+  = f.input :comment, label: t('invoices.comment')
+  button.small(type="submit")= t('general.buttons.save')

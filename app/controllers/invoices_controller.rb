@@ -1,7 +1,7 @@
 class InvoicesController < ApplicationController
 
-  before_action :set_invoice, only: [:destroy]
-  before_action :set_services, only: [:new]
+  before_action :set_invoice, only: [:show, :edit, :update, :destroy]
+  before_action :set_services, only: [:new, :edit]
 
   def new; end
 
@@ -12,6 +12,18 @@ class InvoicesController < ApplicationController
       redirect_to invoices_path, notice: t('invoices.successful_save')
     else
       redirect_to new_invoice_path, alert: @invoice.errors.full_messages.join(', ')
+    end
+  end
+
+  def show; end
+
+  def edit; end
+
+  def update
+    if @invoice.update(invoice_params)
+      redirect_to invoices_path, notice: t('invoices.successful_update')
+    else
+      redirect_to invoice_path, alert: @invoice.errors.full_messages.join(', ')
     end
   end
 

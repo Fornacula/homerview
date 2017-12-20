@@ -18,6 +18,7 @@ et:
       show: Näita
       edit: Muuda
       destroy: Eemalda
+      back_to_invoices: Tagasi arvete loetellu
       back_to_services: Tagasi teenuste loetellu
     destroy_confirmation: Oled sa kindel? Toimingut ei saa tagasi võtta!
   services:
@@ -43,6 +44,7 @@ et:
     successful_save: Arve loodud
     successful_destroy: Arve eemaldatud!
     new: Uus arve
+    edit: Muuda arvet
 
   date:
     formats:

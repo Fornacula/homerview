@@ -1,0 +1,31 @@
+.row
+  .column
+    h4= "#{t('invoices.title')} nr \"#{@invoice.invoice_nr}\""
+.row
+  .column
+    b= "#{t('services.title')}: "
+    = @invoice.service.name
+.row
+  .column
+    b= "#{t('invoices.price')}: "
+    = @invoice.price
+.row
+  .column
+    b= "#{t('invoices.comment')}: "
+    = @invoice.comment
+.row
+  .column
+    b= "#{t('general.attributes.created_at')}: "
+    = l(@invoice.created_at)
+
+.row
+  .column
+    = link_to edit_invoice_path do
+      button.warning.small= t('general.buttons.edit')
+.row
+  .column.small-4
+    = link_to invoices_path do
+      button.small= t('general.buttons.back_to_invoices')
+  .column.small-8.text-right
+    = link_to invoice_path(@invoice), method: :delete, data: {confirm: t('general.destroy_confirmation')} do
+      button.tiny.alert= t('general.buttons.destroy')

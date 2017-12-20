@@ -18,6 +18,7 @@ en:
       show: Show
       edit: Edit
       destroy: Remove
+      back_to_invoices: Back to invoices
       back_to_services: Back to services
     destroy_confirmation: Are you sure? This cannot be undone!
   services:
@@ -43,6 +44,7 @@ en:
     successful_save: Invoice created
     successful_destroy: Invoice removed!
     new: New invoice
+    edit: Edit invoice
 
   time:
     formats:

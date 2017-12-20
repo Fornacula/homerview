@@ -3,6 +3,7 @@ h1 = t('general.titles.invoices_list')
   table
     th
     th= t('services.title')
+    th= t('invoices.invoice_nr')
     th= t('users.title')
     th= t('invoices.price')
     th= t('invoices.comment')
@@ -12,13 +13,14 @@ h1 = t('general.titles.invoices_list')
       tr
         td= c
         td= i.service.name
+        td= i.invoice_nr
         td= i.user.email
         td= i.price
         td= i.comment
-        td= link_to invoice_path(i), method: :delete do
-          button.tiny.alert= t('general.buttons.destroy')
+        td= link_to invoice_path(i) do
+          button.tiny.success= t('general.buttons.show')
       - c += 1
 - else
-  h3= t('invoices.none_found')
+  h4= t('invoices.none_found')
 
 a.button.success.small(href="#{new_invoice_path}")= t('invoices.new')
