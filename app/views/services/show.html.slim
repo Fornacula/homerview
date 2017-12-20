@@ -1,0 +1,15 @@
+.row
+  .column
+    h4="#{t('services.title')} \"#{@service.name}\""
+    b= "#{t('general.attributes.created_at')}: #{l(@service.created_at)}"
+.row
+  .column
+    = link_to edit_service_path do
+      button.warning.small= t('general.buttons.edit')
+.row
+  .column.small-4
+    = link_to services_path do
+      button.small= t('general.buttons.back_to_services')
+  .column.small-8.text-right
+    = link_to service_path(@service), method: :delete, data: {confirm: t('general.destroy_confirmation')} do
+      button.tiny.alert= t('general.buttons.destroy')

@@ -5,17 +5,30 @@ en:
     logout: Log out
     titles:
       invoices: Invoices
-      new_invoice: New invoice
       services: Services
       users: Users
-      services_list: Added services
+      services_list: Your services
       users_list: Registered users
       invoices_list: Created invoices
+    attributes:
+      created_at: Created at
+      updated_at: Last updated
     buttons:
+      save: Save
+      show: Show
+      edit: Edit
       destroy: Remove
+      back_to_services: Back to services
+    destroy_confirmation: Are you sure? This cannot be undone!
   services:
     title: Service
     name: Name
+    none_found: You haven't added any services yet
+    new: New service
+    edit: Edit service
+    successful_save: Service added
+    successful_update: Service updated
+    successful_destroy: Service removed!
   users:
     title: User
     email: e-mail
@@ -30,3 +43,7 @@ en:
     successful_save: Invoice created
     successful_destroy: Invoice removed!
     new: New invoice
+
+  time:
+    formats:
+      default: '%e. %b %Y, %H:%M'

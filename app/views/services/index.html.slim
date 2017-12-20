@@ -1,10 +1,18 @@
 h1 = t('general.titles.services_list')
-table
-  th
-  th= t('services.name')
-  - c = 1
-  - @services.each do |s|
-    tr
-      td= c
-      td= s.name
-    - c += 1
+- if @services.present?
+  table
+    th
+    th= t('services.name')
+    th
+    - c = 1
+    - @services.each do |s|
+      tr
+        td= c
+        td= s.name
+        td= link_to service_path(s) do
+          button.tiny.success= t('general.buttons.show')
+      - c += 1
+- else
+  h4= t('services.none_found')
+
+a.button.success.small(href="#{new_service_path}")= t('services.new')

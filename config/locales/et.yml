@@ -5,17 +5,30 @@ et:
     logout: Logi välja
     titles:
       invoices: Arved
-      new_invoice: Uus arve
       services: Teenused
       users: Kasutajad
-      services_list: Lisatud teenused
+      services_list: Sinu teenused
       users_list: Registreerunud kasutajad
       invoices_list: Loodud arved
+    attributes:
+      created_at: Loodud
+      updated_at: Viimati uuendatud
     buttons:
+      save: Salvesta
+      show: Näita
+      edit: Muuda
       destroy: Eemalda
+      back_to_services: Tagasi teenuste loetellu
+    destroy_confirmation: Oled sa kindel? Toimingut ei saa tagasi võtta!
   services:
     title: Teenus
     name: Nimi
+    none_found: Sa ei ole veel ühtegi teenust lisanud
+    new: Uus teenus
+    edit: Muuda teenust
+    successful_save: Teenus lisatud
+    successful_update: Teenus uuendatud
+    successful_destroy: Teenus eemaldatud!
   users:
     title: Kasutaja
     email: e-mail
@@ -30,3 +43,30 @@ et:
     successful_save: Arve loodud
     successful_destroy: Arve eemaldatud!
     new: Uus arve
+
+  date:
+    formats:
+      day_names:
+      - esmaspäev
+      - teisipäev
+      - kolmapäev
+      - neljapäev
+      - reede
+      - laupäev
+      - pühapäev
+    month_names:
+      - jaanuar
+      - veebruar
+      - märts
+      - aprill
+      - mai
+      - juuni
+      - juuli
+      - august
+      - september
+      - oktoober
+      - november
+      - detsember
+  time:
+    formats:
+      default: '%e.%-m.%Y, %H:%M'
