@@ -1,7 +1,7 @@
-# HOverView
+# hOverView
 *Your real estate under control!*
 
-HOverView (Home Overview) is ment for all the people who own or rent somekind of living space.
+hOverView (Home Overview) is ment for all the people who own or rent somekind of living space.
 Software enables to see all the related utility bills in one place and pay them.
 Project was started mainly due to personal need for such custom-made application.
 
