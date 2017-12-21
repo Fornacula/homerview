@@ -6,6 +6,7 @@ gem 'chartkick'
 gem 'coffee-rails'
 gem 'devise'
 gem 'foundation-rails'
+gem 'groupdate'
 # For building JSON APIs
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
