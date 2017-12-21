@@ -9,7 +9,7 @@ et:
       users: Kasutajad
       services_list: Sinu teenused
       users_list: Registreerunud kasutajad
-      invoices_list: Loodud arved
+      invoices_list: Sinu arved
     attributes:
       created_at: Loodud
       updated_at: Viimati uuendatud
