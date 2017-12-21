@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.4.2'
 
 gem 'brakeman'
+gem 'chartkick'
 gem 'coffee-rails'
 gem 'devise'
 gem 'foundation-rails'
