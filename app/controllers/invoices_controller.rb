@@ -38,7 +38,7 @@ class InvoicesController < ApplicationController
   end
 
   def index
-    @invoices = Invoice.all
+    @invoices = current_user.invoices
   end
 
   private
