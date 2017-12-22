@@ -57,7 +57,7 @@ class InvoicesController < ApplicationController
   end
 
   def get_index_data
-    @library = {
+    @library_options = {
       title: t('graphs.yearly_summary.title'),
       xtitle: t('graphs.yearly_summary.x-title'),
       ytitle: t('graphs.yearly_summary.y-title'),

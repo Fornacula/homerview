@@ -27,4 +27,4 @@
     a.button.success.small(href="#{new_invoice_path}")= t('invoices.new')
 .row
   - if @invoices.present?
-    = area_chart @data, @library
+    = area_chart @data, @library_options
