@@ -1,6 +1,6 @@
 en:
   general:
-    home: HOverView
+    home: hOverView
     login: Log in
     logout: Log out
     titles:
@@ -9,7 +9,7 @@ en:
       users: Users
       services_list: Your services
       users_list: Registered users
-      invoices_list: Created invoices
+      invoices_list: Your invoices
     attributes:
       created_at: Created at
       updated_at: Last updated
