@@ -45,6 +45,11 @@ en:
     successful_destroy: Invoice removed!
     new: New invoice
     edit: Edit invoice
+  graphs:
+    yearly_summary:
+      title: Yearly summary
+      x-title: Time
+      y-title: Sum (€)
 
   time:
     formats:

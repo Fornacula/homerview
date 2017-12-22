@@ -2,6 +2,7 @@ class InvoicesController < ApplicationController
 
   before_action :set_invoice, only: [:show, :edit, :update, :destroy]
   before_action :set_services, only: [:new, :edit]
+  before_action :get_index_data, only: [:index]
 
   def new; end
 
@@ -37,9 +38,7 @@ class InvoicesController < ApplicationController
     end
   end
 
-  def index
-    @invoices = current_user.invoices
-  end
+  def index; end
 
   private
 
@@ -55,5 +54,22 @@ class InvoicesController < ApplicationController
 
   def set_services
     @services = Service.all
+  end
+
+  def get_index_data
+    @library = {
+      title: t('graphs.yearly_summary.title'),
+      xtitle: t('graphs.yearly_summary.x-title'),
+      ytitle: t('graphs.yearly_summary.y-title'),
+      download: true,
+    }
+    @invoices = current_user.invoices
+    services = Service.where(id: @invoices.pluck(:service_id).uniq)
+    @data = []
+    services.each do |s|
+      invoices = @invoices.where(service_id: s.id)
+      points = invoices.each.map { |i| [l(i.created_at, format: :default), i.price] }
+      @data << {name: s.name, data: points}
+    end
   end
 end

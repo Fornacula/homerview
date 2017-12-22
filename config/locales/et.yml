@@ -45,6 +45,11 @@ et:
     successful_destroy: Arve eemaldatud!
     new: Uus arve
     edit: Muuda arvet
+  graphs:
+    yearly_summary:
+      title: Aasta kokkuvõte
+      x-title: Aeg
+      y-title: Summa (€)
 
   date:
     formats:
@@ -72,3 +77,4 @@ et:
   time:
     formats:
       default: '%e.%-m.%Y, %H:%M'
+      date: '%e.%-m.%Y'
