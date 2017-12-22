@@ -1,15 +1,15 @@
-current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
-/home/vonehrenpreis/.rvm/rubies/ruby-2.4.2/bin/ruby -r ./siteconf20171214-25913-1z01rpl.rb extconf.rb
+current directory: /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+/home/vonehrenpreis/.rvm/rubies/ruby-2.4.2/bin/ruby -r ./siteconf20171222-23749-10v0e2t.rb extconf.rb
 creating Makefile
 
-current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+current directory: /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
 make "DESTDIR=" clean
 
-current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+current directory: /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
 make "DESTDIR="
 compiling websocket_mask.c
 linking shared-object websocket_mask.so
 
-current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+current directory: /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20171214-25913-d7vzbv
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20171222-23749-1wjrubt

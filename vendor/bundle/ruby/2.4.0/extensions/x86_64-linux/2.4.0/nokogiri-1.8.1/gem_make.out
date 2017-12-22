@@ -1,5 +1,5 @@
-current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/ext/nokogiri
-/home/vonehrenpreis/.rvm/rubies/ruby-2.4.2/bin/ruby -r ./siteconf20171214-25913-cvys9e.rb extconf.rb
+current directory: /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/ext/nokogiri
+/home/vonehrenpreis/.rvm/rubies/ruby-2.4.2/bin/ruby -r ./siteconf20171222-23749-1auhnrp.rb extconf.rb
 checking if the C compiler accepts ... yes
 Building nokogiri using packaged libraries.
 Using mini_portile version 2.3.0
@@ -31,7 +31,7 @@ Extracting libxml2-2.9.5.tar.gz into tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.5
 Running 'configure' for libxml2 2.9.5... OK
 Running 'compile' for libxml2 2.9.5... OK
 Running 'install' for libxml2 2.9.5... OK
-Activating libxml2 2.9.5 (from /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.5)...
+Activating libxml2 2.9.5 (from /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.5)...
 ************************************************************************
 IMPORTANT NOTICE:
 
@@ -55,7 +55,7 @@ Extracting libxslt-1.1.30.tar.gz into tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.
 Running 'configure' for libxslt 1.1.30... OK
 Running 'compile' for libxslt 1.1.30... OK
 Running 'install' for libxslt 1.1.30... OK
-Activating libxslt 1.1.30 (from /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.30)...
+Activating libxslt 1.1.30 (from /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.30)...
 checking for -llzma... no
 checking for xmlParseDoc() in libxml/parser.h... yes
 checking for xsltParseStylesheetDoc() in libxslt/xslt.h... yes
@@ -69,10 +69,10 @@ checking for xmlSchemaSetValidStructuredErrors()... yes
 checking for xmlSchemaSetParserStructuredErrors()... yes
 creating Makefile
 
-current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/ext/nokogiri
+current directory: /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/ext/nokogiri
 make "DESTDIR=" clean
 
-current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/ext/nokogiri
+current directory: /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/ext/nokogiri
 make "DESTDIR="
 compiling html_document.c
 In file included from /home/vonehrenpreis/.rvm/rubies/ruby-2.4.2/include/ruby-2.4.0/ruby.h:33:0,
@@ -687,9 +687,9 @@ cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand�
 cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
 linking shared-object nokogiri/nokogiri.so
 Cleaning files only used during build.
-rm -rf /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports
-rm -rf /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/ports
+rm -rf /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports
+rm -rf /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/ports
 
-current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/ext/nokogiri
+current directory: /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/ext/nokogiri
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nokogiri.so ./.gem.20171214-25913-4xr15d/nokogiri
+/usr/bin/install -c -m 0755 nokogiri.so ./.gem.20171222-23749-1iw775g/nokogiri
