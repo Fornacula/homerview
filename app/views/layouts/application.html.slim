@@ -6,6 +6,8 @@ html
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'vendor/modernizr', 'application', 'data-turbolinks-track': 'reload'
     = csrf_meta_tags
+    = include_gon
+    = Gon::Base.render_data
   body
     - if user_signed_in?
       = render 'layouts/navbar'

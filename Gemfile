@@ -6,6 +6,8 @@ gem 'chartkick'
 gem 'coffee-rails'
 gem 'devise'
 gem 'foundation-rails'
+# Access controller variables in JavaScript
+gem 'gon'
 gem 'groupdate'
 # For building JSON APIs
 gem 'jbuilder', '~> 2.0'

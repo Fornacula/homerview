@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|et/ do
-    devise_for :users
     root to: 'invoices#index'
+    devise_for :users
+    resources :users, only: [:index]
     resources :services
     resources :invoices
   end
