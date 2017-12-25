@@ -1,6 +1,7 @@
 class Invoice < ApplicationRecord
   belongs_to :service
   belongs_to :user
+  has_one :period
 
   delegate :name, to: :service, prefix: true
 
