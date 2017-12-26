@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe Invoice, type: :model do
   it { is_expected.to belong_to(:service) }
   it { is_expected.to belong_to(:user) }
+  it { is_expected.to have_one(:period) }
 
   it { is_expected.to delegate_method(:name).to(:service).with_prefix }
 
