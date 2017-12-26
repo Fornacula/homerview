@@ -22,5 +22,6 @@
 
 .byebug_history
 
+/coverage/*
 /config/database.yml
 /vendor/bundle/*
