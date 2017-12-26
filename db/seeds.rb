@@ -15,6 +15,7 @@ end
 
 Invoice.create(
   [
+    # ELEKTER:
     { service_id: Service.find_by(name: 'Elekter').id,
       user_id: User.find_by(email: 'andres.ehrenpreis@gmail.com').id,
       price: 54.06,
@@ -113,6 +114,16 @@ Invoice.create(
         period_start: Date.new(2017,11,1),
         period_end: Date.new(2017,11,30)
       )
-    }
+    },
+    # ÜHISTU ARVE
+    { service_id: Service.find_by(name: 'Ühistu arve').id,
+      user_id: User.find_by(email: 'andres.ehrenpreis@gmail.com').id,
+      price: 21.81,
+      period: Period.create(
+        length: 'month',
+        period_start: Date.new(2017,1,1),
+        period_end: Date.new(2017,1,31)
+      )
+    },
   ]
 )
