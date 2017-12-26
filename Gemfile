@@ -2,9 +2,13 @@ source 'https://rubygems.org'
 ruby '2.5.0'
 
 gem 'brakeman'
+gem 'chartkick'
 gem 'coffee-rails'
 gem 'devise'
 gem 'foundation-rails'
+# Access controller variables in JavaScript
+gem 'gon'
+gem 'groupdate'
 # For building JSON APIs
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
@@ -37,4 +41,5 @@ end
 
 group :test do
   gem 'shoulda'
+  gem 'simplecov', require: false
 end
