@@ -92,7 +92,6 @@ class InvoicesController < ApplicationController
         end
       end
     end
-    binding.pry
     @options  = {
       title: t('graphs.yearly_summary.title'),
       hAxis: {
@@ -103,6 +102,30 @@ class InvoicesController < ApplicationController
       },
       download: true
     }
-    @data = @data.transpose
+    ####################################################################
+    months = Invoice.user_invoices_period_uniq_month_names(current_user)
+    ms_hash = {}
+    months.map { |m| ms_hash[m.to_sym] = nil }
+    arr = [['months'] + months]
+    services.each do |s|
+      invoices = @invoices.where(service_id: s.id)
+      periods = invoices.joins(:period).pluck(:period_start)#.map{ |p| I18n.t('date.month_names')[p.month-1] }
+      arr << [s.name]
+      ms_hash.each do |el|
+        i = invoices.joins(:period).find_by('period_start = ?', Date.new(2017, (I18n.t('date.month_names').index(el[0].to_s.downcase) + 1), 1) )
+        if i
+          arr.last << i.price.to_f
+        else
+          arr.last << 0
+        end
+      end
+    end
+    @data = arr.transpose#[
+    binding.pry
+      #['kuu', 'elekter', 'vesi'],
+      #['september', 47.8, 0],
+      #['oktoober', 49.1, 20.5],
+      #['november', 50.3, 0]
+    #] #@data.transpose
   end
 end

@@ -18,4 +18,8 @@ class Invoice < ApplicationRecord
   def strf_period
     single ? I18n.t('invoices.single') : "#{I18n.l(period_start)}...#{I18n.l(period_end)}"
   end
+
+  def self.user_invoices_period_uniq_month_names(user)
+    user.invoices.current_year.pluck(:period_start).map {|p| I18n.t('date.month_names')[p.month-1]}.uniq
+  end
 end
