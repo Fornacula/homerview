@@ -39,12 +39,15 @@ et:
     invoice_nr: Arvenumber
     price: Maksumus
     comment: Kommentaar
+    single: Üksikarve
     none_found: Arved puuduvad
     select_service: Vali teenus
     successful_save: Arve loodud
     successful_destroy: Arve eemaldatud!
     new: Uus arve
     edit: Muuda arvet
+  periods:
+    title: Periood
   graphs:
     yearly_summary:
       title: Aasta kokkuvõte
@@ -53,6 +56,7 @@ et:
 
   date:
     formats:
+      default: '%d.%-m.%Y'
       day_names:
       - esmaspäev
       - teisipäev

@@ -38,7 +38,10 @@ class InvoicesController < ApplicationController
     end
   end
 
-  def index; end
+  def index
+    gon.data = @data
+    gon.options = @options
+  end
 
   private
 
@@ -57,19 +60,49 @@ class InvoicesController < ApplicationController
   end
 
   def get_index_data
-    @library_options = {
-      title: t('graphs.yearly_summary.title'),
-      xtitle: t('graphs.yearly_summary.x-title'),
-      ytitle: t('graphs.yearly_summary.y-title'),
-      download: true,
-    }
     @invoices = current_user.invoices
+
+    atm = Date.current
+    x_axis = ((atm - 1.year)..atm).map { |m| m.month }.uniq
+    graph_max_width = 12 # months
+    oldest_invoice_period = @invoices.first.period_start
+    if oldest_invoice_period > atm - 1.year
+      # If user has less than one year invoices saved to db:
+      graph_max_width = (atm.year * 12 + atm.month) - (oldest_invoice_period.year * 12 + oldest_invoice_period.month)
+      x_axis = x_axis[(12 - graph_max_width)..-1]
+    end
+
+    # Different services that user consumes:
     services = Service.where(id: @invoices.pluck(:service_id).uniq)
-    @data = []
+
+    @data = [['months'] + x_axis]
     services.each do |s|
       invoices = @invoices.where(service_id: s.id)
-      points = invoices.each.map { |i| [l(i.created_at, format: :default), i.price] }
-      @data << {name: s.name, data: points}
+      @data << [s.name] # add row for service-related invoice prices
+      invoices.each do |i|
+        if x_axis.include?(i.period_start.month)
+          @data.last << i.price.to_f
+        else
+          @data.last << 0
+        end
+      end
+      if @data.last.size != x_axis.size + 1
+        (x_axis.size - @data.last.size + 1).times do
+          @data.last << 0
+        end
+      end
     end
+    binding.pry
+    @options  = {
+      title: t('graphs.yearly_summary.title'),
+      hAxis: {
+        title: t('graphs.yearly_summary.x-title'),
+      },
+      vAxis: {
+        title: t('graphs.yearly_summary.y-title'),
+      },
+      download: true
+    }
+    @data = @data.transpose
   end
 end

@@ -39,18 +39,24 @@ en:
     invoice_nr: Invoice nr
     price: Price
     comment: Comment
+    single: Single
     none_found: No invoices were found
     select_service: Pick service
     successful_save: Invoice created
     successful_destroy: Invoice removed!
     new: New invoice
     edit: Edit invoice
+  periods:
+    title: Period
   graphs:
     yearly_summary:
       title: Yearly summary
       x-title: Time
       y-title: Sum (€)
 
+  date:
+    formats:
+      default: '%e.%-m.%Y'
   time:
     formats:
       default: '%e. %b %Y, %H:%M'
