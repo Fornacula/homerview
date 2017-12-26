@@ -82,3 +82,8 @@ et:
     formats:
       default: '%e.%-m.%Y, %H:%M'
       date: '%e.%-m.%Y'
+
+  activerecord:
+    errors:
+      messages:
+        record_invalid: Kirje vigane

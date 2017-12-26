@@ -3,6 +3,8 @@ class Invoice < ApplicationRecord
   belongs_to :user
   has_one :period
 
+  scope :current_year, lambda{ joins(:period).where(['period_start > ?', 1.year.ago]) }
+
   delegate :name, to: :service, prefix: true
   delegate :single, to: :period
   delegate :period_start, to: :period

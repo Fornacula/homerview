@@ -9,5 +9,10 @@ FactoryBot.define do
       period_start (Date.current - 5.months).beginning_of_month
       period_end (Date.current - 5.months).end_of_month
     end
+
+    factory :two_years_ago_montly_period do
+      period_start (Date.current - 2.years).beginning_of_month
+      period_end (Date.current - 2.years).end_of_month
+    end
   end
 end
