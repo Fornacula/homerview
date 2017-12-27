@@ -56,7 +56,7 @@ et:
 
   date:
     formats:
-      default: '%d.%-m.%Y'
+      default: '%d.%m.%Y'
       day_names:
       - esmaspäev
       - teisipäev

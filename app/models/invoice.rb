@@ -16,7 +16,11 @@ class Invoice < ApplicationRecord
   validates :price, presence: true, numericality: true
 
   def strf_period
-    single ? I18n.t('invoices.single') : "#{I18n.l(period_start)}...#{I18n.l(period_end)}"
+    if single
+      I18n.t('invoices.single')
+    else
+      "#{I18n.l(period_start)}...#{I18n.l(period_end)}"
+    end
   end
 
   def self.user_invoices_period_uniq_month_names(user)
