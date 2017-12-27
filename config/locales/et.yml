@@ -39,7 +39,6 @@ et:
     invoice_nr: Arvenumber
     price: Maksumus
     comment: Kommentaar
-    single: Üksikarve
     none_found: Arved puuduvad
     select_service: Vali teenus
     successful_save: Arve loodud
@@ -48,6 +47,10 @@ et:
     edit: Muuda arvet
   periods:
     title: Periood
+    period_start: Perioodi algus
+    period_end: Perioodi lõpp
+    single: Üksikarve
+
   graphs:
     yearly_summary:
       title: Aasta kokkuvõte
@@ -93,6 +96,10 @@ et:
       - Okt
       - Nov
       - Dets
+    order:
+      - day
+      - month
+      - year
   time:
     formats:
       default: '%e.%-m.%Y, %H:%M'

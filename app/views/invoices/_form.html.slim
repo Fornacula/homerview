@@ -1,11 +1,19 @@
 = simple_form_for invoice do |f|
-  = f.input :invoice_nr, label: t('invoices.invoice_nr')
-  = f.association :service,
-            label: t('services.title'),
-            collection: services,
-            prompt: t('invoices.select_service'),
-            group_label_method: :name,
-            group_method: :id
-  = f.input :price, label: t('invoices.price')
-  = f.input :comment, label: t('invoices.comment')
-  button.small(type="submit")= t('general.buttons.save')
+  .row
+    .column.small-12.medium-6
+      = f.input :invoice_nr, label: t('invoices.invoice_nr')
+      = f.association :service,
+                label: t('services.title'),
+                collection: services,
+                prompt: t('invoices.select_service'),
+                group_label_method: :name,
+                group_method: :id
+      = f.input :price, label: t('invoices.price')
+      = f.input :comment, label: t('invoices.comment')
+    .column.small-12.medium-6
+      = f.association :period do |p|
+        = p.input :period_start, as: :date, label: t('periods.period_start')
+        = p.input :period_end, as: :date, label: t('periods.period_end')
+        = p.input :single, as: :boolean, label: t('periods.single')
+.row
+  button.small(type='submit')= t('general.buttons.save')

@@ -39,7 +39,6 @@ en:
     invoice_nr: Invoice nr
     price: Price
     comment: Comment
-    single: Single
     none_found: No invoices were found
     select_service: Pick service
     successful_save: Invoice created
@@ -48,6 +47,9 @@ en:
     edit: Edit invoice
   periods:
     title: Period
+    period_start: Period start
+    period_end: Period end
+    single: Single invoice
   graphs:
     yearly_summary:
       title: Yearly summary

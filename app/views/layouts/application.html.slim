@@ -3,12 +3,11 @@ html
   head
     meta charset='utf-8' name='viewport' content='width=device-width, initial-scale=1.0'
     title= content_for?(:title) ? yield(:title) : t('general.home')
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag \
       "https://www.gstatic.com/charts/loader.js",
       'vendor/modernizr',
-      'application',
-      'data-turbolinks-track': 'reload'
+      'application'
     = csrf_meta_tags
     = include_gon
     = Gon::Base.render_data

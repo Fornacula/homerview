@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require rails-ujs
-//= require turbolinks
 //= require_tree .
 
 //= require Chart.bundle
@@ -26,4 +25,5 @@ $(document).ready(function(){
   // Graphs:
   google.charts.load('current', { packages: ['corechart'], language: 'et' })
   google.charts.setOnLoadCallback(drawYearSummary)
+  manage_single_invoice()
 })
