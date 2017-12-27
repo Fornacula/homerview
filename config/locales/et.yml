@@ -66,6 +66,7 @@ et:
       - laupäev
       - pühapäev
     month_names:
+      -
       - jaanuar
       - veebruar
       - märts
@@ -78,6 +79,20 @@ et:
       - oktoober
       - november
       - detsember
+    abbr_month_names:
+      -
+      - Jaan
+      - Veeb
+      - Mär
+      - Apr
+      - Mai
+      - Juun
+      - Juul
+      - Aug
+      - Sept
+      - Okt
+      - Nov
+      - Dets
   time:
     formats:
       default: '%e.%-m.%Y, %H:%M'

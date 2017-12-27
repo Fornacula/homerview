@@ -2,7 +2,7 @@
 *Your real estate under control!*
 
 hOverView (Home Overview) is ment for all the people who own or rent somekind of living space.
-Software will enable to see all the related utility bills and statistics in one place and pay them.
+Software will enable to manage all the utility bills of the living space. Colorful statistics and overview is also included.
 Project was started mainly due to personal need for such custom-made application.
 
 ## Development setup
@@ -14,5 +14,3 @@ rails-5.1.4
 3. Replace database_example.yml with database.yml and set username/password for you dev-environment databases
 4. `bundle exec rake db:setup`
 5. `bundle exec rake db:migrate`
-
-... and you should be ready to go.

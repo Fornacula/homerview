@@ -20,6 +20,6 @@ class Invoice < ApplicationRecord
   end
 
   def self.user_invoices_period_uniq_month_names(user)
-    user.invoices.current_year.pluck(:period_start).map {|p| I18n.t('date.month_names')[p.month-1]}.uniq
+    user.invoices.current_year.pluck(:period_start).map {|p| I18n.t('date.abbr_month_names')[p.month]}.uniq
   end
 end
