@@ -4,7 +4,7 @@ ruby '2.5.0'
 gem 'brakeman'
 gem 'chartkick'
 gem 'coffee-rails'
-gem 'devise'
+gem 'devise', git: 'https://github.com/plataformatec/devise' #, ref: '88e9a85'
 gem 'foundation-rails'
 # Access controller variables in JavaScript
 gem 'gon'
