@@ -1,15 +1,11 @@
-current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/bcrypt-3.1.11/ext/mri
-<<<<<<< HEAD
-/home/vonehrenpreis/.rvm/rubies/ruby-2.4.2/bin/ruby -r ./siteconf20171214-24658-16pebai.rb extconf.rb
-=======
-/home/vonehrenpreis/.rvm/rubies/ruby-2.4.2/bin/ruby -r ./siteconf20171214-8399-tenfwu.rb extconf.rb
->>>>>>> user_auth
+current directory: /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/bcrypt-3.1.11/ext/mri
+/home/vonehrenpreis/.rvm/rubies/ruby-2.4.2/bin/ruby -r ./siteconf20171222-23749-1w5o14r.rb extconf.rb
 creating Makefile
 
-current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/bcrypt-3.1.11/ext/mri
+current directory: /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/bcrypt-3.1.11/ext/mri
 make "DESTDIR=" clean
 
-current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/bcrypt-3.1.11/ext/mri
+current directory: /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/bcrypt-3.1.11/ext/mri
 make "DESTDIR="
 compiling bcrypt_ext.c
 compiling crypt.c
@@ -18,10 +14,6 @@ compiling crypt_gensalt.c
 compiling wrapper.c
 linking shared-object bcrypt_ext.so
 
-current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/bcrypt-3.1.11/ext/mri
+current directory: /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/bcrypt-3.1.11/ext/mri
 make "DESTDIR=" install
-<<<<<<< HEAD
-/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20171214-24658-ikn0lx
-=======
-/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20171214-8399-aon3p5
->>>>>>> user_auth
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20171222-23749-nm9cay

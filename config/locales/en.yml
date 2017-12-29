@@ -21,6 +21,10 @@ en:
       back_to_invoices: Back to invoices
       back_to_services: Back to services
     destroy_confirmation: Are you sure? This cannot be undone!
+    notes:
+      not_enough_invoices: |
+        You will start to see colorful statistics and graphs here
+        if you have enough invoice entries saved in database.
   services:
     title: Service
     name: Name
@@ -45,7 +49,20 @@ en:
     successful_destroy: Invoice removed!
     new: New invoice
     edit: Edit invoice
+  periods:
+    title: Period
+    period_start: Period start
+    period_end: Period end
+    single: Single invoice
+  graphs:
+    yearly_summary:
+      title: Yearly summary
+      x-title: Time
+      y-title: Sum (€)
 
+  date:
+    formats:
+      default: '%d.%m.%Y'
   time:
     formats:
       default: '%e. %b %Y, %H:%M'

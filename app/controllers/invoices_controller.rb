@@ -1,7 +1,8 @@
-class InvoicesController < ApplicationController
+# frozen_string_literal: true
 
-  before_action :set_invoice, only: [:show, :edit, :update, :destroy]
-  before_action :set_services, only: [:new, :edit]
+class InvoicesController < ApplicationController
+  before_action :set_invoice, only: %i[show edit update destroy]
+  before_action :set_services, only: %i[new edit]
 
   def new; end
 
@@ -38,7 +39,7 @@ class InvoicesController < ApplicationController
   end
 
   def index
-    @invoices = Invoice.all
+    @invoices = current_user.invoices
   end
 
   private

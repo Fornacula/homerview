@@ -1,13 +1,13 @@
-current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/json-1.8.6/ext/json
-/home/vonehrenpreis/.rvm/rubies/ruby-2.4.2/bin/ruby -r ./siteconf20171214-25913-10myq1f.rb extconf.rb
+current directory: /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/json-1.8.6/ext/json
+/home/vonehrenpreis/.rvm/rubies/ruby-2.4.2/bin/ruby -r ./siteconf20171222-23749-5vp5by.rb extconf.rb
 creating Makefile
 
-current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/json-1.8.6/ext/json
+current directory: /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/json-1.8.6/ext/json
 make "DESTDIR=" clean
 
-current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/json-1.8.6/ext/json
+current directory: /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/json-1.8.6/ext/json
 make "DESTDIR="
 make: Nothing to be done for 'all'.
 
-current directory: /home/vonehrenpreis/apps/homerview/vendor/bundle/ruby/2.4.0/gems/json-1.8.6/ext/json
+current directory: /home/vonehrenpreis/apps/hoverview/vendor/bundle/ruby/2.4.0/gems/json-1.8.6/ext/json
 make "DESTDIR=" install

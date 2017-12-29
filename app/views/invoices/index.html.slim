@@ -1,26 +1,27 @@
-h1 = t('general.titles.invoices_list')
-- if @invoices.present?
-  table
-    th
-    th= t('services.title')
-    th= t('invoices.invoice_nr')
-    th= t('users.title')
-    th= t('invoices.price')
-    th= t('invoices.comment')
-    th
-    - c = 1
-    - @invoices.each do |i|
-      tr
-        td= c
-        td= i.service.name
-        td= i.invoice_nr
-        td= i.user.email
-        td= i.price
-        td= i.comment
-        td= link_to invoice_path(i) do
-          button.tiny.success= t('general.buttons.show')
-      - c += 1
-- else
-  h4= t('invoices.none_found')
-
-a.button.success.small(href="#{new_invoice_path}")= t('invoices.new')
+.row
+  .columns
+    h2= "#{t('general.titles.invoices_list')}:"
+    - if @invoices.present?
+      table
+        th
+        th= t('services.title')
+        th= t('invoices.invoice_nr')
+        th= t('users.title')
+        th= t('invoices.price')
+        th= t('periods.title')
+        th
+        - c = 1
+        - @invoices.each do |i|
+          tr
+            td= c
+            td= i.service.name
+            td= i.invoice_nr
+            td= i.user.email
+            td= i.price
+            td= i.strf_period
+            td= link_to invoice_path(i) do
+              button.tiny.success= t('general.buttons.show')
+          - c += 1
+    - else
+      h4= t('invoices.none_found')
+    a.button.success.small(href="#{new_invoice_path}")= t('invoices.new')

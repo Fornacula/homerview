@@ -10,8 +10,20 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require jquery_ujs
 //= require rails-ujs
-//= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+//= require Chart.bundle
+//= require chartkick
+
+$(document).ready(function(){
+  // front-end framework
+  $(document).foundation
+
+  // Graphs:
+  google.charts.load('current', { packages: ['corechart'], language: 'et' })
+  google.charts.setOnLoadCallback(drawYearSummary)
+  manage_single_invoice()
+})

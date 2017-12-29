@@ -24,4 +24,4 @@
 
 /coverage/*
 /config/database.yml
-/vendor/bundle
+/vendor/bundle/*
