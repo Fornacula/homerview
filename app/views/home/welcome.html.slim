@@ -1,0 +1,5 @@
+- if current_user.invoices.count < 2
+    h3= t('general.notes.not_enough_invoices')
+- else
+  .row
+    #yearSummaryChart
