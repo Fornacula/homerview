@@ -21,10 +21,11 @@ et:
       back_to_invoices: Tagasi arvete loetellu
       back_to_services: Tagasi teenuste loetellu
     destroy_confirmation: Oled sa kindel? Toimingut ei saa tagasi võtta!
-  notes:
-    not_enough_invoices: |
-      Siin näed õige pea statistikat ja värvilisi graafikuid enda
-      väljaminekute kohta, kui oled piisavalt palju arveid andmebaasi salvestanud
+    notes:
+      not_enough_invoices: |
+        Siin näed õige pea statistikat ja värvilisi graafikuid
+        enda väljaminekute kohta, kui oled piisavalt palju
+        arveid andmebaasi salvestanud.
   services:
     title: Teenus
     name: Nimi
