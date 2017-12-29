@@ -2,7 +2,6 @@
 
 FactoryBot.define do
   factory :period do
-    length 'month'
     period_start '2017-06-01'
     period_end '2017-06-30'
     single false
@@ -23,7 +22,6 @@ FactoryBot.define do
     end
 
     factory :single_period do
-      length nil
       period_start '2017-12-01'
       period_end nil
       single true
