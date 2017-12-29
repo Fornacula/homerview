@@ -14,22 +14,22 @@ ActiveRecord::Schema.define(version: 20171223162318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pgcrypto"
 
-  create_table "invoices", force: :cascade do |t|
-    t.bigint "service_id"
-    t.bigint "user_id"
-    t.decimal "price"
+  create_table "invoices", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "service_id"
+    t.uuid "user_id"
+    t.decimal "price", null: false
     t.string "comment"
+    t.string "invoice_nr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "invoice_nr"
     t.index ["service_id"], name: "index_invoices_on_service_id"
     t.index ["user_id"], name: "index_invoices_on_user_id"
   end
 
-  create_table "periods", force: :cascade do |t|
-    t.bigint "invoice_id"
-    t.string "length"
+  create_table "periods", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "invoice_id"
     t.date "period_start"
     t.date "period_end"
     t.boolean "single", default: false
@@ -38,22 +38,22 @@ ActiveRecord::Schema.define(version: 20171223162318) do
     t.index ["invoice_id"], name: "index_periods_on_invoice_id"
   end
 
-  create_table "service_users", force: :cascade do |t|
-    t.bigint "service_id"
-    t.bigint "user_id"
+  create_table "service_users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "service_id"
+    t.uuid "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["service_id"], name: "index_service_users_on_service_id"
     t.index ["user_id"], name: "index_service_users_on_user_id"
   end
 
-  create_table "services", force: :cascade do |t|
-    t.string "name"
+  create_table "services", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
