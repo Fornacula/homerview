@@ -1,3 +1,5 @@
+.row
+  a.button.success.small(href="#{new_invoice_path}")= t('invoices.new')
 - if current_user.invoices.count < 2
     h3= t('general.notes.not_enough_invoices')
 - else
