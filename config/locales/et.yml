@@ -44,6 +44,7 @@ et:
     invoice_nr: Arvenumber
     price: Maksumus
     comment: Kommentaar
+    invoice_date: Arve kuupäev
     none_found: Arved puuduvad
     select_service: Vali teenus
     successful_save: Arve loodud

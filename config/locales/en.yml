@@ -43,6 +43,7 @@ en:
     invoice_nr: Invoice nr
     price: Price
     comment: Comment
+    invoice_date: Invoice date
     none_found: No invoices were found
     select_service: Pick service
     successful_save: Invoice created
