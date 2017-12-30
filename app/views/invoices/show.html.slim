@@ -1,22 +1,48 @@
 .row
-  .column
-    h4= "#{t('invoices.title')} nr \"#{@invoice.invoice_nr}\""
-.row
-  .column
-    b= "#{t('services.title')}: "
-    = @service.name
-.row
-  .column
-    b= "#{t('invoices.price')}: "
-    = @invoice.price
-.row
-  .column
-    b= "#{t('invoices.comment')}: "
-    = @invoice.comment
-.row
-  .column
-    b= "#{t('general.attributes.created_at')}: "
-    = l(@invoice.created_at)
+  .column.small-11.medium-5.square-box
+    .row
+      .column
+        h4= "#{t('invoices.title')}:"
+    - if @invoice.invoice_nr.present?
+      .row
+        .column
+          b= "#{t('invoices.invoice_nr')}: "
+          = @invoice.invoice_nr
+    .row
+      .column
+        b= "#{t('services.title')}: "
+        = @service.name
+    .row
+      .column
+        b= "#{t('invoices.price')}: "
+        = @invoice.price
+    - if @invoice.comment.present?
+      .row
+        .column
+          b= "#{t('invoices.comment')}: "
+          = @invoice.comment
+    .row
+      .column
+        b= "#{t('general.attributes.created_at')}: "
+        = l(@invoice.created_at)
+  .column.small-11.medium-5.square-box
+    .row
+      .column
+        h4= "#{t('periods.title')}:"
+    .row
+      - if @invoice.single?
+        .column
+          b= t('periods.single')
+        .column
+          b= "#{t('invoices.invoice_date')}:"
+          = @invoice.period_start
+      - else
+        .column
+          b= "#{t('periods.period_start')}: "
+          = l(@invoice.period_start)
+        .column
+          b= "#{t('periods.period_end')}: "
+          = l(@invoice.period_end)
 
 .row
   .column

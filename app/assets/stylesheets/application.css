@@ -48,10 +48,16 @@ body {
   text-align: center;
 }
 
-.box {
+.round-box {
   border: 1px solid #cacaca;
   border-radius: 15px;
   padding: 2rem;
+}
+
+.square-box {
+  border: 1px solid #cacaca;
+  margin: 1rem;
+  padding: 1rem;
 }
 
 i.medium {
