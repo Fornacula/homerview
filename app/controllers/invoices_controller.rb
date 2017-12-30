@@ -4,11 +4,10 @@ class InvoicesController < ApplicationController
   before_action :set_invoice, only: %i[show edit update destroy]
   before_action :set_services, only: %i[new edit]
 
-  def new; end
-
   def create
     @invoice = Invoice.new(invoice_params)
     @invoice.user = current_user
+    @invoice.build_period(period_params)
     if @invoice.save
       redirect_to invoices_path, notice: t('invoices.successful_save')
     else
@@ -19,8 +18,6 @@ class InvoicesController < ApplicationController
   def show
     @service = @invoice.service
   end
-
-  def edit; end
 
   def update
     if @invoice.update(invoice_params)
@@ -47,6 +44,12 @@ class InvoicesController < ApplicationController
   def invoice_params
     params.require(:invoice).permit(
       :invoice_nr, :service_id, :user_id, :price, :comment
+    )
+  end
+
+  def period_params
+    params.require(:invoice).require(:period).permit(
+      :period_start, :period_end, :single
     )
   end
 

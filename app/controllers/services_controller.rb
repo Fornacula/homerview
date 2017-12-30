@@ -1,8 +1,8 @@
+# frozen_string_literal: true
+
 class ServicesController < ApplicationController
 
   before_action :set_service, only: [:show, :edit, :update, :destroy]
-
-  def new; end
 
   def create
     @service = Service.new(service_params)
@@ -12,10 +12,6 @@ class ServicesController < ApplicationController
       redirect_to new_service_path, alert: @service.errors.full_messages.join(', ')
     end
   end
-
-  def show; end
-
-  def edit; end
 
   def update
     if @service.update(service_params)
