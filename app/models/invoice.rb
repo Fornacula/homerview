@@ -5,7 +5,7 @@ class Invoice < ApplicationRecord
   belongs_to :user
   has_one :period
 
-  scope :current_year, -> { joins(:period).where(['period_start > ?', 1.year.ago]) }
+  scope :current_year, -> { joins(:period).where(['period_start > ?', 1.year.ago]).order('period_start') }
 
   delegate :name, to: :service, prefix: true
   delegate :single, to: :period
@@ -17,9 +17,13 @@ class Invoice < ApplicationRecord
   validates :user, presence: true
   validates :price, presence: true, numericality: true
 
+  def single?
+    self.single
+  end
+
   def strf_period
     if single
-      I18n.t('invoices.single')
+      "#{I18n.t('periods.single')} #{I18n.l(period_start)}"
     else
       "#{I18n.l(period_start)}...#{I18n.l(period_end)}"
     end

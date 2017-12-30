@@ -14,6 +14,7 @@ RSpec.describe Invoice, type: :model do
 
   it { is_expected.to validate_presence_of(:service) }
   it { is_expected.to validate_presence_of(:user) }
+  it { is_expected.to validate_presence_of(:period) }
   it { is_expected.to validate_presence_of(:price) }
   it { is_expected.to validate_numericality_of(:price) }
 
@@ -33,6 +34,8 @@ RSpec.describe Invoice, type: :model do
     end
   end
 
+  it { expect(described_class.new).to respond_to(:single?) }
+
   context 'stringify period' do
     it 'can stringify periodic invoice' do
       invoice = build(:invoice)
@@ -41,23 +44,12 @@ RSpec.describe Invoice, type: :model do
 
     it 'can stringify single invoice' do
       invoice = build(:single_invoice)
-      expect(invoice.strf_period).to eq(I18n.t('invoices.single'))
+      expect(invoice.strf_period).to eq("#{I18n.t('periods.single')} #{I18n.l(invoice.period_start)}")
     end
   end
 
-  it 'gives out uniq month names for user invoices' do
+  it 'gives out uniq month names for user invoices in timely order' do
     user = create(:user)
-    Invoice.create(
-      attributes_for(
-        :invoice,
-        user: user,
-        period: build(
-          :period,
-          period_start: Date.new(2017, 7, 1),
-          period_end: Date.new(2017, 7, 31)
-        )
-      )
-    )
     Invoice.create(
       attributes_for(
         :invoice,
@@ -69,6 +61,18 @@ RSpec.describe Invoice, type: :model do
         )
       )
     )
+    Invoice.create(
+      attributes_for(
+        :invoice,
+        user: user,
+        period: build(
+          :period,
+          period_start: Date.new(2017, 7, 1),
+          period_end: Date.new(2017, 7, 31)
+        )
+      )
+    )
     expect(Invoice.user_invoices_period_uniq_month_names(user)).to eq(%w[Juul Nov])
   end
+
 end
