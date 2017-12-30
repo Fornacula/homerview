@@ -8,6 +8,6 @@ class Period < ApplicationRecord
   private
 
   def manage_single_invoice_period
-    period_end = nil if single?
+    self.period_end = nil if self.single
   end
 end
