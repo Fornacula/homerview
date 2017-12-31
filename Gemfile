@@ -3,6 +3,11 @@ ruby '2.5.0'
 
 gem 'brakeman'
 gem 'chartkick'
+# Simple form with validations
+gem 'simple_form'
+gem 'client_side_validations'
+gem 'client_side_validations-simple_form'
+
 gem 'coffee-rails'
 gem 'devise', git: 'https://github.com/plataformatec/devise' #, ref: '88e9a85'
 gem 'foundation-rails'
@@ -17,7 +22,6 @@ gem 'rails', '5.1.4'
 gem 'sass-rails', '~> 5.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'simple_form'
 gem 'slim-rails'
 gem 'uglifier', '>= 1.3.0'
 

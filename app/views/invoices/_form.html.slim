@@ -1,4 +1,4 @@
-= simple_form_for invoice do |f|
+= simple_form_for invoice, validate: true do |f|
   .row
     .column.small-12.medium-6
       = f.input :invoice_nr, label: t('invoices.invoice_nr')
@@ -25,4 +25,4 @@
           required: false
         = p.input :single?, as: :boolean, label: t('periods.single')
   .row
-    button.small(type="submit")= t('general.buttons.save')
+    button.small(type='submit')= t('general.buttons.save')

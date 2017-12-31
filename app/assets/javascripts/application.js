@@ -17,6 +17,8 @@
 
 //= require Chart.bundle
 //= require chartkick
+//= require rails.validations
+//= require rails.validations.simple_form
 
 $(document).ready(function(){
   // front-end framework
