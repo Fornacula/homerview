@@ -18,7 +18,7 @@ RSpec.describe Invoice, type: :model do
   it { is_expected.to validate_presence_of(:price) }
   it { is_expected.to validate_numericality_of(:price) }
 
-  describe 'named scope' do
+  describe 'named scopes' do
     context '.current_year' do
       it 'includes invoice with period of 5 months ago' do
         invoice = Invoice.create(attributes_for(:invoice, period: build(:five_months_ago_monthly_period)))
@@ -30,6 +30,16 @@ RSpec.describe Invoice, type: :model do
         invoice = Invoice.create(attributes_for(:invoice, period: build(:two_years_ago_montly_period)))
 
         expect(Invoice.current_year).not_to include(invoice)
+      end
+    end
+
+    context '.by_month' do
+      it 'includes invoices in given month and excludes any other' do
+        invoice1 = create(:invoice, period: build(:period, period_start: Date.new(2014, 1, 5)))
+        invoice2 = create(:invoice, period: build(:period, period_start: Date.new(2017, 5, 19)))
+
+        expect(Invoice.by_month(1).to_a).to eq([Invoice.find(invoice1.id)])
+        expect(Invoice.by_month(5).to_a).to eq([Invoice.find(invoice2.id)])
       end
     end
   end
@@ -48,31 +58,71 @@ RSpec.describe Invoice, type: :model do
     end
   end
 
-  it 'gives out uniq month names for user invoices in timely order' do
-    user = create(:user)
-    Invoice.create(
-      attributes_for(
-        :invoice,
-        user: user,
-        period: build(
-          :period,
-          period_start: Date.new(2017, 11, 1),
-          period_end: Date.new(2017, 11, 30)
-        )
+  describe "graph's data" do
+    let(:user) { create(:user) }
+    let(:service1) { create(:service, name: 'Test_1') }
+    let(:service2) { create(:service, name: 'Test_2') }
+    let(:period_jul1) do
+      build(
+        :period,
+        period_start: Date.new(2017, 7, 1),
+        period_end: Date.new(2017, 7, 31)
       )
-    )
-    Invoice.create(
-      attributes_for(
-        :invoice,
-        user: user,
-        period: build(
-          :period,
-          period_start: Date.new(2017, 7, 1),
-          period_end: Date.new(2017, 7, 31)
-        )
+    end
+    let(:period_jul2) do
+      build(
+        :period,
+        period_start: Date.new(2017, 7, 1),
+        period_end: Date.new(2017, 7, 31)
       )
-    )
-    expect(Invoice.user_invoices_period_uniq_month_names(user)).to eq(%w[Juul Nov])
-  end
+    end
+    let(:period_nov) do
+      build(
+        :period,
+        period_start: Date.new(2017, 11, 1),
+        period_end: Date.new(2017, 11, 30)
+      )
+    end
+    let!(:invoice1) { create(:invoice, user: user, service: service1, period: period_nov) }
+    let!(:invoice2) { create(:invoice, user: user, service: service2, period: period_jul1) }
+    let!(:invoice3) { create(:invoice, user: user, service: service2, period: period_jul2) }
 
+    it 'returns uniq services based on invoice service types' do
+      expect(Invoice.user_services_by_invoices(Invoice.all)).to eq([service1, service2])
+    end
+
+    it 'gives out uniq month names for user invoices in timely order' do
+      expect(Invoice.user_invoices_period_uniq_months(user)).to eq([7, 11])
+    end
+
+    it 'returns month names based on month numbers' do
+      months = [1, 2, 3, 10, 11, 12]
+      expect(Invoice.user_invoices_period_uniq_month_names(months)).to eq(
+        %w[Jaan Veeb Mär Okt Nov Dets]
+      )
+    end
+
+    context 'matrices' do
+      let(:matrix_transposed) { Invoice.yearly_summary_graph_data(user).transpose }
+
+      it 'displays all the relevant services' do
+        expect(matrix_transposed.size).to eq(3)
+        expect(matrix_transposed.second.first).to eq('Test_1')
+        expect(matrix_transposed.third.first).to eq('Test_2')
+      end
+
+      it 'displays x-axis ticks as abbreviated month names' do
+        expect(matrix_transposed.first).to eq(%w[months Juul Nov])
+      end
+
+      it 'sums up service invoices (single as well as periodic at once) in one month' do
+        expect(matrix_transposed.last.second).to eq(19.98)
+      end
+
+      it 'fills the gaps with zeros' do
+        expect(matrix_transposed.second).to eq(['Test_1', 0, 9.99])
+        expect(matrix_transposed.last).to eq(['Test_2', 19.98, 0])
+      end
+    end
+  end
 end
