@@ -254,7 +254,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   config.omniauth :facebook, ENV['FACEBOOK_APP_KEY'], ENV['FACEBOOK_APP_SECRET'],
   scope: 'email'
-  config.omniauth :google_oauth2, ENV['GOOGLE_OAUTH2_APP_ID'], ENV['GOOGLE_OAUTH2_APP_SECRET'],
+  config.omniauth :google_oauth2, ENV['GOOGLE_APP_KEY'], ENV['GOOGLE_APP_SECRET'],
   scope: 'email, profile, offline', prompt: 'consent'
 
   # ==> Warden configuration
