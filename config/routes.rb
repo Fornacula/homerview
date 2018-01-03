@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  scope "(:locale)", locale: /en|et/ do
-    root to: 'home#welcome', as: 'welcome'
-    devise_for :users
-    resources :users, only: [:index]
-    resources :services
-    resources :invoices
-  end
+  root to: 'home#welcome', as: 'welcome'
+  devise_for :users,
+    class_name: 'FormUser',
+    controllers: {
+      omniauth_callbacks: 'omniauth_callbacks',
+      registrations: 'registrations'
+    }
+  resources :users, only: [:index]
+  resources :services
+  resources :invoices
 end
