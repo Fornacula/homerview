@@ -12,4 +12,12 @@
 
     input.button(type='submit' value='Log in')
 
+  input.button(type='submit' value='Log in')
+    .button-group-expand.stacked-for-small.omniauth-login
+      = link_to user_facebook_omniauth_authorize_path do
+        button.i.fi-social-facebook= 'Facebook'
+    .button-group-expand.stacked-for-small.omniauth-login
+      = link_to user_google_oauth2_omniauth_authorize_path do
+        button.i.fi-social-google-plus= 'Google'
+
   = render 'devise/shared/links'
