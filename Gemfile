@@ -32,7 +32,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 group :development, :test do
-  gem 'dotenv-rails'
+  gem 'dotenv-rails', require: 'dotenv/rails-now'
   gem 'factory_bot_rails', '~> 4.0'
   gem 'faker'
   gem 'pry-byebug'
