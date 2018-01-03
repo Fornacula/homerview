@@ -10,14 +10,12 @@
       = f.check_box :remember_me
       = f.label :remember_me
 
-    input.button(type='submit' value='Log in')
+  input.button.center(type='submit' value=t('links.log_in'))
 
-  input.button(type='submit' value='Log in')
-    .button-group-expand.stacked-for-small.omniauth-login
-      = link_to user_facebook_omniauth_authorize_path do
-        button.i.fi-social-facebook= 'Facebook'
-    .button-group-expand.stacked-for-small.omniauth-login
-      = link_to user_google_oauth2_omniauth_authorize_path do
-        button.i.fi-social-google-plus= 'Google'
+  .center.button-group-expand.stacked-for-small
+    = link_to user_facebook_omniauth_authorize_path do
+      button.i.fi-social-facebook= 'Facebook'
+    = link_to user_google_oauth2_omniauth_authorize_path do
+      button.i.fi-social-google-plus= 'Google'
 
   = render 'devise/shared/links'
