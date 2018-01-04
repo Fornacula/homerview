@@ -11,5 +11,5 @@
     = link_to services_path do
       button.small= t('general.buttons.back_to_services')
   .column.small-8.text-right
-    = link_to service_path(@service), method: :delete, data: {confirm: t('general.destroy_confirmation')} do
+    = link_to service_path(@service), method: :delete, data: { confirm: t('general.destroy_confirmation') } do
       button.tiny.alert= t('general.buttons.destroy')
