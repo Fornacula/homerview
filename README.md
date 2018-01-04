@@ -14,3 +14,12 @@ rails-5.1.4
 3. Replace database_example.yml with database.yml and set username/password for you dev-environment databases
 4. `bundle exec rake db:setup`
 5. `bundle exec rake db:migrate`
+
+## For running the specs
+
+Only `bundle exec rake db:test:prepare` is needed. After that `bundle exec rspec -fd spec/` will run the tests.
+
+For using Facebook and Google authentication locally, it's neccessary to set up ENV-variables for both of them (keys as well as secrets).
+Contact project administrator to get these.
+
+Live application can be seen at http://hoverview.herokuapp.com. Unfortunatelly CSS doesn't work perfectly in Heroku :)
