@@ -8,7 +8,8 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'b55b4ee1329e7d52fa1ff65fef807e534bd3ee4d8644f8c9c9790676ce256f27cd7c108088a8a936db44828ea74bb572abff0ca4cc1be7aa999c5543eb4ca828'
+  # config.secret_key = 'b55b4ee1329e7d52fa1ff65fef807e534bd3ee4d8644f8c9c9790'\
+  # '676ce256f27cd7c108088a8a936db44828ea74bb572abff0ca4cc1be7aa999c5543eb4ca828'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -110,7 +111,8 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '4db49d26d120714aeeea81ff644b6eb2f025deb29587a2cac928cadae6d8e20598c0741ffd6537bbb2f41b83ef496226a99003d7e24f1b7e95a3e137018b353d'
+  # config.pepper = '4db49d26d120714aeeea81ff644b6eb2f025deb29587a2cac928cad'\
+  # 'ae6d8e20598c0741ffd6537bbb2f41b83ef496226a99003d7e24f1b7e95a3e137018b353d'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -252,10 +254,19 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  config.omniauth :facebook, ENV['FACEBOOK_APP_KEY'], ENV['FACEBOOK_APP_SECRET'],
-  scope: 'email'
-  config.omniauth :google_oauth2, ENV['GOOGLE_APP_KEY'], ENV['GOOGLE_APP_SECRET'],
-  scope: 'email, profile, offline', prompt: 'consent'
+  config.omniauth(
+    :facebook,
+    ENV['FACEBOOK_APP_KEY'],
+    ENV['FACEBOOK_APP_SECRET'],
+    scope: 'email'
+  )
+  config.omniauth(
+    :google_oauth2,
+    ENV['GOOGLE_APP_KEY'],
+    ENV['GOOGLE_APP_SECRET'],
+    scope: 'email, profile, offline',
+    prompt: 'consent'
+  )
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

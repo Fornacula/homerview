@@ -15,11 +15,7 @@ class HomeController < ApplicationController
       vAxis: {
         title: t('graphs.yearly_summary.y-title')
       },
-      download: true,
-      animation:{
-        duration: 1000,
-        easing: 'out',
-      }
+      download: true
     }
     gon.options = options
   end
