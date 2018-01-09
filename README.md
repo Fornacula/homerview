@@ -6,6 +6,7 @@ Software will enable to manage all the utility bills of the living space. Colorf
 Project was started mainly due to personal need for such custom-made application.
 
 ## Development setup
+
 ruby-2.5.0
 rails-5.1.4
 
@@ -19,7 +20,9 @@ rails-5.1.4
 
 Only `bundle exec rake db:test:prepare` is needed. After that `bundle exec rspec -fd spec/` will run the tests.
 
+## Omniauth social media authentication
+
 For using Facebook and Google authentication locally, it's neccessary to set up ENV-variables for both of them (keys as well as secrets).
 Contact project administrator to get these.
 
-Live application can be seen at http://hoverview.herokuapp.com. Unfortunatelly CSS doesn't work perfectly in Heroku :)
+Live application can be seen at http://hoverview.herokuapp.com.
