@@ -4,12 +4,14 @@ en:
     login: Log in
     logout: Log out
     titles:
+      communities: Communities
       invoices: Invoices
       services: Services
       users: Users
-      services_list: Your services
+      communities_list: My communities
+      services_list: My services
       users_list: Registered users
-      invoices_list: Your invoices
+      invoices_list: My invoices
     attributes:
       created_at: Created at
       updated_at: Last updated
@@ -18,6 +20,7 @@ en:
       show: Show
       edit: Edit
       destroy: Remove
+      back_to_communities: Back to communities
       back_to_invoices: Back to invoices
       back_to_services: Back to services
     destroy_confirmation: Are you sure? This cannot be undone!
@@ -25,6 +28,15 @@ en:
       not_enough_invoices: |
         You will start to see colorful statistics and graphs here
         if you have enough invoice entries saved in database.
+  communities:
+    edit: Edit community
+    name: Name of the community
+    new: Create new community
+    none_found: "You don't have any communities yet, create one here:"
+    successful_create: Community created
+    successful_destroy: Community removed
+    successful_update: Community updated
+    title: Community
   services:
     title: Service
     name: Name

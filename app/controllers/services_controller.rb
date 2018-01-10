@@ -16,7 +16,7 @@ class ServicesController < ApplicationController
     if @service.update(service_params)
       redirect_to services_path, notice: t('services.successful_update')
     else
-      redirect_to new_service_path, alert: @service.errors.full_messages.join(', ')
+      redirect_to edit_service_path, alert: @service.errors.full_messages.join(', ')
     end
   end
 
@@ -24,7 +24,7 @@ class ServicesController < ApplicationController
     if @service.destroy
       redirect_to services_path, notice: t('services.successful_destroy')
     else
-      redirect_to services_path, alert: @service.errors.full_messages.join(', ')
+      redirect_to service_path(@service), alert: @service.errors.full_messages.join(', ')
     end
   end
 

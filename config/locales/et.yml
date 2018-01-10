@@ -4,12 +4,14 @@ et:
     login: Logi sisse
     logout: Logi välja
     titles:
+      communities: Kommuunid
       invoices: Arved
       services: Teenused
       users: Kasutajad
-      services_list: Sinu teenused
+      communities_list: Minu kommuunid
+      services_list: Minu teenused
       users_list: Registreerunud kasutajad
-      invoices_list: Sinu arved
+      invoices_list: Minu arved
     attributes:
       created_at: Loodud
       updated_at: Viimati uuendatud
@@ -18,6 +20,7 @@ et:
       show: Näita
       edit: Muuda
       destroy: Eemalda
+      back_to_communities: Tagasi kommuunide loetellu
       back_to_invoices: Tagasi arvete loetellu
       back_to_services: Tagasi teenuste loetellu
     destroy_confirmation: Oled sa kindel? Toimingut ei saa tagasi võtta!
@@ -26,6 +29,15 @@ et:
         Siin näed õige pea statistikat ja värvilisi graafikuid
         enda väljaminekute kohta, kui oled piisavalt palju
         arveid andmebaasi salvestanud.
+  communities:
+    edit: Muuda kommuuni
+    name: Kommuuni nimi
+    new: Loo uus kommuun
+    none_found: "Sa ei kuulu veel ühtegi kommuuni, loo esimene kommuun siin:"
+    successful_create: Kommuun loodud
+    successful_destroy: Kommuun eemaldatud
+    successful_update: Kommuun uuendatud
+    title: Kommuun
   services:
     title: Teenus
     name: Nimi

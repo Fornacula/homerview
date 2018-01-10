@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180103203933) do
+ActiveRecord::Schema.define(version: 20180110181547) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "pgcrypto"
+
+  create_table "communities", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.uuid "user_id"
+    t.index ["user_id"], name: "index_communities_on_user_id"
+  end
 
   create_table "identities", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "user_id"
@@ -43,6 +51,16 @@ ActiveRecord::Schema.define(version: 20180103203933) do
     t.datetime "updated_at", null: false
     t.index ["service_id"], name: "index_invoices_on_service_id"
     t.index ["user_id"], name: "index_invoices_on_user_id"
+  end
+
+  create_table "partnerships", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.decimal "share", default: "0.0"
+    t.uuid "user_id"
+    t.uuid "community_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["community_id"], name: "index_partnerships_on_community_id"
+    t.index ["user_id"], name: "index_partnerships_on_user_id"
   end
 
   create_table "periods", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -87,8 +105,11 @@ ActiveRecord::Schema.define(version: 20180103203933) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "communities", "users"
   add_foreign_key "invoices", "services"
   add_foreign_key "invoices", "users"
+  add_foreign_key "partnerships", "communities"
+  add_foreign_key "partnerships", "users"
   add_foreign_key "service_users", "services"
   add_foreign_key "service_users", "users"
 end
