@@ -4,6 +4,7 @@ et:
     login: Logi sisse
     logout: Logi välja
     titles:
+      communities_list: Sinu kommuunid
       invoices: Arved
       services: Teenused
       users: Kasutajad
@@ -26,6 +27,11 @@ et:
         Siin näed õige pea statistikat ja värvilisi graafikuid
         enda väljaminekute kohta, kui oled piisavalt palju
         arveid andmebaasi salvestanud.
+  communities:
+    new: Loo uus kommuun
+    name: Kommuuni nimi
+    successful_create: Kommuun loodud
+    none_found: "Sa ei kuulu veel ühtegi kommuuni, loo esimene kommuun siin:"
   services:
     title: Teenus
     name: Nimi

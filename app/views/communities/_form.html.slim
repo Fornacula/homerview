@@ -1,0 +1,6 @@
+= simple_form_for community, validate: true do |f|
+  .row
+    .column.small-12.medium-6
+      = f.input :name, label: t('communities.name')
+  .row
+    button.small(type='submit')= t('general.buttons.save')

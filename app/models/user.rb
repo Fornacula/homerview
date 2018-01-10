@@ -10,6 +10,10 @@ class User < ApplicationRecord
   has_many :identities
   has_many :partnerships
 
+  def communities
+    Community.where(id: partnerships.pluck(:community_id))
+  end
+
   def facebook
     identities.where(provider: 'facebook').first
   end

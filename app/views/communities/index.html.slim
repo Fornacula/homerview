@@ -1,0 +1,18 @@
+h1 = t('general.titles.communities_list')
+- if @communities.present?
+  table
+    th
+    th= t('communities.name')
+    th
+    - c = 1
+    - @communities.each do |cm|
+      tr
+        td= c
+        td= cm.name
+        td= link_to community_path(cm) do
+          button.tiny.success= t('general.buttons.show')
+      - c += 1
+- else
+  h4= t('communities.none_found')
+
+a.button.success.small(href="#{new_community_path}")= t('communities.new')
