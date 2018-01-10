@@ -19,6 +19,7 @@ en:
       show: Show
       edit: Edit
       destroy: Remove
+      back_to_communities: Back to communities
       back_to_invoices: Back to invoices
       back_to_services: Back to services
     destroy_confirmation: Are you sure? This cannot be undone!
@@ -27,6 +28,7 @@ en:
         You will start to see colorful statistics and graphs here
         if you have enough invoice entries saved in database.
   communities:
+    title: Community
     new: Create new community
     name: Name of the community
     successful_create: Community created

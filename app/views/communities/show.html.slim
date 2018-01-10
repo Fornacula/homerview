@@ -1,0 +1,15 @@
+.row
+  .column
+    h4="#{t('communities.title')} \"#{@community.name}\""
+    b= "#{t('general.attributes.created_at')}: #{l(@community.created_at)}"
+.row
+  .column
+    = link_to edit_community_path do
+      button.warning.small= t('general.buttons.edit')
+.row
+  .column.small-4
+    = link_to communities_path do
+      button.small= t('general.buttons.back_to_communities')
+  .column.small-8.text-right
+    = link_to community_path(@community), method: :delete, data: { confirm: t('general.destroy_confirmation') } do
+      button.tiny.alert= t('general.buttons.destroy')

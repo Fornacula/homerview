@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CommunitiesController < ApplicationController
+  before_action :set_community, only: %i[show edit destroy]
+
   def create
     @community = Community.new(community_params)
     partnership = current_user.partnerships.build(
@@ -24,5 +26,9 @@ class CommunitiesController < ApplicationController
     params.require(:community).permit(
       :name, :user
     )
+  end
+
+  def set_community
+    @community = Community.find(params[:id])
   end
 end

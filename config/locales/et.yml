@@ -19,6 +19,7 @@ et:
       show: Näita
       edit: Muuda
       destroy: Eemalda
+      back_to_communities: Tagasi kommuunide loetellu
       back_to_invoices: Tagasi arvete loetellu
       back_to_services: Tagasi teenuste loetellu
     destroy_confirmation: Oled sa kindel? Toimingut ei saa tagasi võtta!
@@ -28,6 +29,7 @@ et:
         enda väljaminekute kohta, kui oled piisavalt palju
         arveid andmebaasi salvestanud.
   communities:
+    title: Kommuun
     new: Loo uus kommuun
     name: Kommuuni nimi
     successful_create: Kommuun loodud
