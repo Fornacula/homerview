@@ -4,13 +4,14 @@ et:
     login: Logi sisse
     logout: Logi välja
     titles:
-      communities_list: Sinu kommuunid
+      communities: Kommuunid
       invoices: Arved
       services: Teenused
       users: Kasutajad
-      services_list: Sinu teenused
+      communities_list: Minu kommuunid
+      services_list: Minu teenused
       users_list: Registreerunud kasutajad
-      invoices_list: Sinu arved
+      invoices_list: Minu arved
     attributes:
       created_at: Loodud
       updated_at: Viimati uuendatud
