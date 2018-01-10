@@ -29,11 +29,13 @@ en:
         You will start to see colorful statistics and graphs here
         if you have enough invoice entries saved in database.
   communities:
-    title: Community
-    new: Create new community
+    edit: Edit community
     name: Name of the community
-    successful_create: Community created
+    new: Create new community
     none_found: "You don't have any communities yet, create one here:"
+    successful_create: Community created
+    successful_update: Community updated
+    title: Community
   services:
     title: Service
     name: Name

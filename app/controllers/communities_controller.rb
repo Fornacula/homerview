@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CommunitiesController < ApplicationController
-  before_action :set_community, only: %i[show edit destroy]
+  before_action :set_community, only: %i[show edit update destroy]
 
   def create
     @community = Community.new(community_params)
@@ -13,6 +13,14 @@ class CommunitiesController < ApplicationController
       redirect_to communities_path, notice: t('communities.successful_create')
     else
       redirect_to new_community_path, alert: partnership.errors.full_messages.join(', ')
+    end
+  end
+
+  def update
+    if @community.update(community_params)
+      redirect_to communities_path, notice: t('communities.successful_update')
+    else
+      redirect_to edit_community_path, alert: @community.errors.full_messages.join(', ')
     end
   end
 

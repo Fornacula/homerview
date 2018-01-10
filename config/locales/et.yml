@@ -30,11 +30,13 @@ et:
         enda väljaminekute kohta, kui oled piisavalt palju
         arveid andmebaasi salvestanud.
   communities:
-    title: Kommuun
-    new: Loo uus kommuun
+    edit: Muuda kommuuni
     name: Kommuuni nimi
-    successful_create: Kommuun loodud
+    new: Loo uus kommuun
     none_found: "Sa ei kuulu veel ühtegi kommuuni, loo esimene kommuun siin:"
+    successful_create: Kommuun loodud
+    successful_update: Kommuun uuendatud
+    title: Kommuun
   services:
     title: Teenus
     name: Nimi
