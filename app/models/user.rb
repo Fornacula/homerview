@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
   has_many :invoices
   has_many :identities
+  has_many :partnerships
 
   def facebook
     identities.where(provider: 'facebook').first
