@@ -35,6 +35,7 @@ et:
     new: Loo uus kommuun
     none_found: "Sa ei kuulu veel ühtegi kommuuni, loo esimene kommuun siin:"
     successful_create: Kommuun loodud
+    successful_destroy: Kommuun eemaldatud
     successful_update: Kommuun uuendatud
     title: Kommuun
   services:

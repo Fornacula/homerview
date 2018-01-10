@@ -34,6 +34,7 @@ en:
     new: Create new community
     none_found: "You don't have any communities yet, create one here:"
     successful_create: Community created
+    successful_destroy: Community removed
     successful_update: Community updated
     title: Community
   services:

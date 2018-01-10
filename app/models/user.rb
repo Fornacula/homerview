@@ -9,8 +9,9 @@ class User < ApplicationRecord
   has_many :invoices
   has_many :identities
   has_many :partnerships
+  has_many :communities
 
-  def communities
+  def all_communities
     Community.where(id: partnerships.pluck(:community_id))
   end
 

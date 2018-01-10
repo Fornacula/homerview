@@ -5,6 +5,7 @@ class CommunitiesController < ApplicationController
 
   def create
     @community = Community.new(community_params)
+    @community.set_master(current_user)
     partnership = current_user.partnerships.build(
       community: @community,
       share: 1
@@ -24,8 +25,16 @@ class CommunitiesController < ApplicationController
     end
   end
 
+  def destroy
+    if @community.destroy
+      redirect_to communities_path, notice: t('communities.successful_destroy')
+    else
+      redirect_to community_path(@community), alert: @community.errors.full_messages.join(', ')
+    end
+  end
+
   def index
-    @communities = current_user.communities
+    @communities = current_user.all_communities
   end
 
   private
