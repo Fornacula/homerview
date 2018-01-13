@@ -3,4 +3,6 @@
 class Invitation < ApplicationRecord
   belongs_to :community
   belongs_to :user
+
+  validates :email, presence: true
 end
