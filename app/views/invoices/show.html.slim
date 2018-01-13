@@ -1,8 +1,6 @@
+- @title = t('invoices.title')
 .row
   .column.small-11.medium-5.square-box
-    .row
-      .column
-        h4= "#{t('invoices.title')}:"
     - if @invoice.invoice_nr.present?
       .row
         .column

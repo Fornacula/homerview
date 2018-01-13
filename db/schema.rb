@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180110181547) do
+ActiveRecord::Schema.define(version: 20180111184202) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,15 @@ ActiveRecord::Schema.define(version: 20180110181547) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_identities_on_user_id"
+  end
+
+  create_table "invitations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.decimal "share"
+    t.string "email"
+    t.uuid "community_id"
+    t.uuid "user_id"
+    t.index ["community_id"], name: "index_invitations_on_community_id"
+    t.index ["user_id"], name: "index_invitations_on_user_id"
   end
 
   create_table "invoices", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -106,6 +115,8 @@ ActiveRecord::Schema.define(version: 20180110181547) do
   end
 
   add_foreign_key "communities", "users"
+  add_foreign_key "invitations", "communities"
+  add_foreign_key "invitations", "users"
   add_foreign_key "invoices", "services"
   add_foreign_key "invoices", "users"
   add_foreign_key "partnerships", "communities"

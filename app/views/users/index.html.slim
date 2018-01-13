@@ -1,12 +1,14 @@
-h1 = t('general.titles.users_list')
-table
-  th
-  th= t('users.email')
-  th= t('users.created_at')
-  - c = 1
-  - @users.each do |u|
-    tr
-      td= c
-      td= u.email
-      td= u.created_at
-    - c += 1
+- @title = t('general.titles.users_list')
+.row
+  .column
+    table.hover
+      th
+      th= t('users.email')
+      th= t('users.created_at')
+      - c = 1
+      - @users.each do |u|
+        tr
+          td= c
+          td= u.email
+          td= u.created_at
+        - c += 1

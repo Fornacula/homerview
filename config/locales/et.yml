@@ -31,6 +31,7 @@ et:
         arveid andmebaasi salvestanud.
   communities:
     edit: Muuda kommuuni
+    master: Kommuuni haldaja
     name: Kommuuni nimi
     new: Loo uus kommuun
     none_found: "Sa ei kuulu veel ühtegi kommuuni, loo esimene kommuun siin:"
@@ -38,19 +39,16 @@ et:
     successful_destroy: Kommuun eemaldatud
     successful_update: Kommuun uuendatud
     title: Kommuun
-  services:
-    title: Teenus
-    name: Nimi
-    none_found: Sa ei ole veel ühtegi teenust lisanud
-    new: Uus teenus
-    edit: Muuda teenust
-    successful_save: Teenus lisatud
-    successful_update: Teenus uuendatud
-    successful_destroy: Teenus eemaldatud!
-  users:
-    title: Kasutaja
-    email: e-mail
-    created_at: Loodud
+    invite_member: Lisa kommuuni uus liige
+    members: Liikmed
+    member_invited: Liikme kutsumine õnnestus
+  graphs:
+    yearly_summary:
+      title: Aasta kokkuvõte
+      x-title: Aeg
+      y-title: Summa (€)
+  invitations:
+    new: Lisa kommuuniliige
   invoices:
     title: Arve
     invoice_nr: Arvenumber
@@ -63,16 +61,28 @@ et:
     successful_destroy: Arve eemaldatud!
     new: Uus arve
     edit: Muuda arvet
+  partnerships:
+    added_at: Kommuuniliige lisatud
+    share: Maksete osakaal
   periods:
     title: Periood
     period_start: Perioodi algus
     period_end: Perioodi lõpp
     single: Üksikarve
-  graphs:
-    yearly_summary:
-      title: Aasta kokkuvõte
-      x-title: Aeg
-      y-title: Summa (€)
+  services:
+    title: Teenus
+    name: Nimi
+    none_found: Sa ei ole veel ühtegi teenust lisanud
+    new: Uus teenus
+    edit: Muuda teenust
+    successful_save: Teenus lisatud
+    successful_update: Teenus uuendatud
+    successful_destroy: Teenus eemaldatud!
+  users:
+    created_at: Loodud
+    email: e-mail
+    name: Nimi
+    title: Kasutaja
 
   date:
     formats:
@@ -119,8 +129,8 @@ et:
       - year
   time:
     formats:
-      default: '%e.%-m.%Y, %H:%M'
-      date: '%e.%-m.%Y'
+      default: '%d.%m.%Y, %H:%M'
+      date: '%e.%m.%Y'
 
   activerecord:
     errors:

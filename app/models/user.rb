@@ -10,6 +10,14 @@ class User < ApplicationRecord
   has_many :identities
   has_many :partnerships
   has_many :communities
+  has_many :invitations
+
+  def full_name
+    # TODO: migrate separate field to user, let user
+    # also choose which names from identities he/she would
+    # like to use
+    identities.present? ? identities.first.name : "Ano Nymous"
+  end
 
   def all_communities
     Community.where(id: partnerships.pluck(:community_id))

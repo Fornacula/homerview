@@ -30,6 +30,7 @@ en:
         if you have enough invoice entries saved in database.
   communities:
     edit: Edit community
+    master: Community manager
     name: Name of the community
     new: Create new community
     none_found: "You don't have any communities yet, create one here:"
@@ -37,19 +38,16 @@ en:
     successful_destroy: Community removed
     successful_update: Community updated
     title: Community
-  services:
-    title: Service
-    name: Name
-    none_found: You haven't added any services yet
-    new: New service
-    edit: Edit service
-    successful_save: Service added
-    successful_update: Service updated
-    successful_destroy: Service removed!
-  users:
-    title: User
-    email: e-mail
-    created_at: Created at
+    invite_member: Invite a new community member
+    members: Members
+    member_invited: Member invited
+  graphs:
+    yearly_summary:
+      title: Yearly summary
+      x-title: Time
+      y-title: Sum (€)
+  invitations:
+    new: Lisa kommuuniliige
   invoices:
     title: Invoice
     invoice_nr: Invoice nr
@@ -62,16 +60,28 @@ en:
     successful_destroy: Invoice removed!
     new: New invoice
     edit: Edit invoice
+  partnerships:
+    added_at: Member added
+    share: Share of payments
   periods:
     title: Period
     period_start: Period start
     period_end: Period end
     single: Single invoice
-  graphs:
-    yearly_summary:
-      title: Yearly summary
-      x-title: Time
-      y-title: Sum (€)
+  services:
+    title: Service
+    name: Name
+    none_found: You haven't added any services yet
+    new: New service
+    edit: Edit service
+    successful_save: Service added
+    successful_update: Service updated
+    successful_destroy: Service removed!
+  users:
+    created_at: Created at
+    email: e-mail
+    name: Name
+    title: User
 
   date:
     formats:
