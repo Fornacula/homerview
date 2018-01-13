@@ -31,6 +31,7 @@ et:
         arveid andmebaasi salvestanud.
   communities:
     edit: Muuda kommuuni
+    master: Kommuuni haldaja
     name: Kommuuni nimi
     new: Loo uus kommuun
     none_found: "Sa ei kuulu veel ühtegi kommuuni, loo esimene kommuun siin:"
@@ -38,6 +39,8 @@ et:
     successful_destroy: Kommuun eemaldatud
     successful_update: Kommuun uuendatud
     title: Kommuun
+    invite_member: Lisa kommuuni uus liige
+    members: Liikmed
   graphs:
     yearly_summary:
       title: Aasta kokkuvõte
@@ -57,6 +60,9 @@ et:
     successful_destroy: Arve eemaldatud!
     new: Uus arve
     edit: Muuda arvet
+  partnerships:
+    added_at: Kommuuniliige lisatud
+    share: Maksete osakaal
   periods:
     title: Periood
     period_start: Perioodi algus
@@ -121,8 +127,8 @@ et:
       - year
   time:
     formats:
-      default: '%e.%-m.%Y, %H:%M'
-      date: '%e.%-m.%Y'
+      default: '%d.%m.%Y, %H:%M'
+      date: '%e.%m.%Y'
 
   activerecord:
     errors:

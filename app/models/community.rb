@@ -12,4 +12,8 @@ class Community < ApplicationRecord
   def set_master(user)
     self.master = user
   end
+
+  def members
+    self.partnerships.map { |p| p.user }
+  end
 end

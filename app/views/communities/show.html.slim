@@ -1,7 +1,26 @@
 .row
   .column
-    h4="#{t('communities.title')} \"#{@community.name}\""
-    b= "#{t('general.attributes.created_at')}: #{l(@community.created_at)}"
+    h2
+      .bold= "#{@community.name}"
+.row
+  .column
+    h3= "#{t('communities.members')}:"
+    table.table-striped
+      th
+      th= t('users.email')
+      th= t('partnerships.added_at')
+      th= t('partnerships.share')
+      - c = 1
+      - @partnerships.each do |p|
+        tr
+          td= c
+          td= member_name(p)
+          td= l(p.created_at)
+          td= percentify(p.share)
+        - c += 1
+.row
+  .column
+    = link_to t('communities.invite_member'), new_invitation_path
 .row
   .column
     = link_to edit_community_path do
@@ -13,3 +32,4 @@
   .column.small-8.text-right
     = link_to community_path(@community), method: :delete, data: { confirm: t('general.destroy_confirmation') } do
       button.tiny.alert= t('general.buttons.destroy')
+- if @community.master == User.find(current_user.id)
