@@ -2,6 +2,7 @@
 
 class Community < ApplicationRecord
   has_many :partnerships, dependent: :destroy
+  has_many :invitations, dependent: :destroy
   belongs_to :user, required: false
 
   validates :name, presence: true

@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_many :identities
   has_many :partnerships
   has_many :communities
+  has_many :invitations
 
   def all_communities
     Community.where(id: partnerships.pluck(:community_id))
