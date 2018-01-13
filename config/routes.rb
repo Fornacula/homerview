@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :users, only: %i[show index]
   resources :services
   resources :invoices
-  resources :communities
-  resources :invitations, only: %i[new create show]
+  resources :communities do
+    resources :invitations, only: %i[new create show]
+  end
 end

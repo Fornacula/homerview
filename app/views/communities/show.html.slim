@@ -17,7 +17,7 @@
         - c += 1
 .row
   .column
-    = link_to t('communities.invite_member'), new_invitation_path
+    = link_to t('communities.invite_member'), new_community_invitation_path(@community)
 .row
   .column
     = link_to edit_community_path do
