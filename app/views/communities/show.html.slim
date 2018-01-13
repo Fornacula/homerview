@@ -1,20 +1,17 @@
+- @title = "#{t('communities.title')} #{@community.name}"
 .row
   .column
-    h2
-      .bold= "#{@community.name}"
-.row
-  .column
-    h3= "#{t('communities.members')}:"
-    table.table-striped
+    h4= "#{t('communities.members')}:"
+    table.hover
       th
-      th= t('users.email')
+      th= t('users.name')
       th= t('partnerships.added_at')
       th= t('partnerships.share')
       - c = 1
       - @partnerships.each do |p|
         tr
           td= c
-          td= member_name(p)
+          td= link_to member_name(p), user_path(p.user)
           td= l(p.created_at)
           td= percentify(p.share)
         - c += 1

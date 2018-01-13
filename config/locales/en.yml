@@ -77,9 +77,10 @@ en:
     successful_update: Service updated
     successful_destroy: Service removed!
   users:
-    title: User
-    email: e-mail
     created_at: Created at
+    email: e-mail
+    name: Name
+    title: User
 
   date:
     formats:

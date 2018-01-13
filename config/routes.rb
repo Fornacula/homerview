@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       omniauth_callbacks: 'omniauth_callbacks',
       registrations: 'registrations'
     }
-  resources :users, only: [:index]
+  resources :users, only: %i[show index]
   resources :services
   resources :invoices
   resources :communities

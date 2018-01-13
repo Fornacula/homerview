@@ -78,9 +78,10 @@ et:
     successful_update: Teenus uuendatud
     successful_destroy: Teenus eemaldatud!
   users:
-    title: Kasutaja
-    email: e-mail
     created_at: Loodud
+    email: e-mail
+    name: Nimi
+    title: Kasutaja
 
   date:
     formats:

@@ -14,6 +14,7 @@ html
   body
     - if user_signed_in?
       = render 'layouts/navbar'
+      = render 'layouts/title'
       = render 'layouts/messages'
       = yield
     - else
