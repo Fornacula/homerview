@@ -40,6 +40,7 @@ en:
     title: Community
     invite_member: Invite a new community member
     members: Members
+    member_invited: Member invited
   graphs:
     yearly_summary:
       title: Yearly summary

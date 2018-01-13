@@ -41,6 +41,7 @@ et:
     title: Kommuun
     invite_member: Lisa kommuuni uus liige
     members: Liikmed
+    member_invited: Liikme kutsumine õnnestus
   graphs:
     yearly_summary:
       title: Aasta kokkuvõte
