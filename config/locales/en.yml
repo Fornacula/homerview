@@ -37,19 +37,13 @@ en:
     successful_destroy: Community removed
     successful_update: Community updated
     title: Community
-  services:
-    title: Service
-    name: Name
-    none_found: You haven't added any services yet
-    new: New service
-    edit: Edit service
-    successful_save: Service added
-    successful_update: Service updated
-    successful_destroy: Service removed!
-  users:
-    title: User
-    email: e-mail
-    created_at: Created at
+  graphs:
+    yearly_summary:
+      title: Yearly summary
+      x-title: Time
+      y-title: Sum (€)
+  invitations:
+    new: Lisa kommuuniliige
   invoices:
     title: Invoice
     invoice_nr: Invoice nr
@@ -67,11 +61,19 @@ en:
     period_start: Period start
     period_end: Period end
     single: Single invoice
-  graphs:
-    yearly_summary:
-      title: Yearly summary
-      x-title: Time
-      y-title: Sum (€)
+  services:
+    title: Service
+    name: Name
+    none_found: You haven't added any services yet
+    new: New service
+    edit: Edit service
+    successful_save: Service added
+    successful_update: Service updated
+    successful_destroy: Service removed!
+  users:
+    title: User
+    email: e-mail
+    created_at: Created at
 
   date:
     formats:

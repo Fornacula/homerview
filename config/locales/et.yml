@@ -38,19 +38,13 @@ et:
     successful_destroy: Kommuun eemaldatud
     successful_update: Kommuun uuendatud
     title: Kommuun
-  services:
-    title: Teenus
-    name: Nimi
-    none_found: Sa ei ole veel ühtegi teenust lisanud
-    new: Uus teenus
-    edit: Muuda teenust
-    successful_save: Teenus lisatud
-    successful_update: Teenus uuendatud
-    successful_destroy: Teenus eemaldatud!
-  users:
-    title: Kasutaja
-    email: e-mail
-    created_at: Loodud
+  graphs:
+    yearly_summary:
+      title: Aasta kokkuvõte
+      x-title: Aeg
+      y-title: Summa (€)
+  invitations:
+    new: Lisa kommuuniliige
   invoices:
     title: Arve
     invoice_nr: Arvenumber
@@ -68,11 +62,19 @@ et:
     period_start: Perioodi algus
     period_end: Perioodi lõpp
     single: Üksikarve
-  graphs:
-    yearly_summary:
-      title: Aasta kokkuvõte
-      x-title: Aeg
-      y-title: Summa (€)
+  services:
+    title: Teenus
+    name: Nimi
+    none_found: Sa ei ole veel ühtegi teenust lisanud
+    new: Uus teenus
+    edit: Muuda teenust
+    successful_save: Teenus lisatud
+    successful_update: Teenus uuendatud
+    successful_destroy: Teenus eemaldatud!
+  users:
+    title: Kasutaja
+    email: e-mail
+    created_at: Loodud
 
   date:
     formats:
