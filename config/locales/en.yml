@@ -47,7 +47,12 @@ en:
       x-title: Time
       y-title: Sum (€)
   invitations:
+    invited_at: Kutsumise aeg
     new: Lisa kommuuniliige
+    pending_invitations: Pending invitations
+    no_invitations_yet: |
+      No pending invitations. You can invite a new community member from here:
+
   invoices:
     title: Invoice
     invoice_nr: Invoice nr

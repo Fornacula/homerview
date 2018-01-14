@@ -1,6 +1,6 @@
 - @title = "#{t('communities.title')} #{@community.name}"
 .row
-  .column
+  .column.small-12.large-8
     h4= "#{t('communities.members')}:"
     table.hover
       th
@@ -15,8 +15,22 @@
           td= l(p.created_at)
           td= percentify(p.share)
         - c += 1
-.row
-  .column
+  .column.small-12.large-4
+    - if @invitations.present?
+      h4= "#{t('invitations.pending_invitations')}:"
+      table.hover
+        th
+        th= t('users.email')
+        th= t('invitations.invited_at')
+        - c = 1
+        - @invitations.each do |i|
+          tr
+            td= c
+            td= i.email
+            td= i.created_at
+            - c += 1
+    - else
+      h4= t('invitations.no_invitations_yet')
     = link_to t('communities.invite_member'), new_community_invitation_path(@community)
 .row
   .column

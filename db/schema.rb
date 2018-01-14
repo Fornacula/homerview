@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(version: 20180111184202) do
     t.string "email"
     t.uuid "community_id"
     t.uuid "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["community_id"], name: "index_invitations_on_community_id"
     t.index ["user_id"], name: "index_invitations_on_user_id"
   end

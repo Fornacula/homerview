@@ -48,7 +48,11 @@ et:
       x-title: Aeg
       y-title: Summa (€)
   invitations:
+    invited_at: Invited at
     new: Lisa kommuuniliige
+    pending_invitations: Ootel liikmekutsed
+    no_invitations_yet: |
+      Ootel liikmekutseid ei ole. Saad kutsuda uusi kommuuniliikmeid siit:
   invoices:
     title: Arve
     invoice_nr: Arvenumber
