@@ -2,8 +2,8 @@
 
 class InvitationsController < ApplicationController
 
-  before_action :set_community, only: %i[new create destroy]
-  before_action :set_invitation, only: %i[show destroy]
+  before_action :set_community, only: %i[new create destroy join]
+  before_action :set_invitation, only: %i[show destroy join]
 
   def new
     @invitation = @community.invitations.build
@@ -34,6 +34,20 @@ class InvitationsController < ApplicationController
       redirect_to community_path(@community), alert: t('invitations.revoked')
     else
       redirect_to community_path(@community), alert: @invitation.errors.full_messages.join(', ')
+    end
+  end
+
+  def join
+    user = @invitation.user
+    partnership = @community.partnerships.build(
+      share: @invitation.share,
+      user: @invitation.user
+    )
+    if partnership.save
+      @invitation.destroy
+      redirect_to user_path(user), notice: t('invitations.joined')
+    else
+      redirect_to user_path(user), alert: t('invitations.unable_to_join')
     end
   end
 

@@ -47,7 +47,11 @@ et:
       x-title: Aeg
       y-title: Summa (€)
   invitations:
-    invited_at: Invited at
+    errors:
+      email_already_present: Sellise emailiga kasutaja on juba kommuuni liige
+    invited_at: Kutsumise aeg
+    join: Liitu
+    joined: Liitusid kommuuniga
     new: Lisa kommuuniliige
     no_invitations_yet: |
       Ootel liikmekutseid ei ole. Saad kutsuda uusi kommuuniliikmeid siit:
@@ -56,6 +60,9 @@ et:
     revoked: Kutse tühistatud
     re-send: Saada uuesti
     share: Maksete osakaal
+    unable_to_join: Kommuuniga liitumine ebaõnnestus
+    you_have_been_invited: |
+      Sind on kutsutud järgnevatesse kommuunidesse, liitumiseks vajuta 'Liitu':
   invoices:
     title: Arve
     invoice_nr: Arvenumber

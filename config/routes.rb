@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   resources :invoices
   resources :communities do
     resources :invitations, only: %i[new create show destroy]
+    post 'join/:id', to: 'invitations#join', as: 'join'
   end
 end
