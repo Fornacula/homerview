@@ -8,6 +8,8 @@ RSpec.describe Invitation, type: :model do
 
   it { is_expected.to validate_presence_of(:email) }
   it { is_expected.to validate_uniqueness_of(:email).scoped_to(:community_id) }
+  it { is_expected.to validate_presence_of(:share) }
+  it { is_expected.to validate_inclusion_of(:share).in_range(0..1) }
   it 'validates format of e-mail'
 
   it 'shows to community master'
