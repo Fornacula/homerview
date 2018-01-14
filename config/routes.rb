@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   resources :services
   resources :invoices
   resources :communities do
-    resources :invitations, only: %i[new create show]
+    resources :invitations, only: %i[new create show destroy]
   end
 end

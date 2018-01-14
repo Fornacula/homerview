@@ -2,8 +2,8 @@
 
 class InvitationsController < ApplicationController
 
-  before_action :set_community, only: %i[new create]
-  before_action :set_invitation, only: %i[show]
+  before_action :set_community, only: %i[new create destroy]
+  before_action :set_invitation, only: %i[show destroy]
 
   def new
     @invitation = @community.invitations.build
@@ -25,7 +25,15 @@ class InvitationsController < ApplicationController
 
   def show
     unless @invitation.allowed_to_see?(User.find(current_user.id))
-      redirect_to welcome_path, alert: "Not allowed!"
+      redirect_to welcome_path, alert: t('general.alerts.restricted')
+    end
+  end
+
+  def destroy
+    if @invitation.destroy
+      redirect_to community_path(@community), alert: t('invitations.revoked')
+    else
+      redirect_to community_path(@community), alert: @invitation.errors.full_messages.join(', ')
     end
   end
 

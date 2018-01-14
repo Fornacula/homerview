@@ -20,14 +20,13 @@ en:
       show: Show
       edit: Edit
       destroy: Remove
-      back_to_communities: Back to communities
-      back_to_invoices: Back to invoices
-      back_to_services: Back to services
     destroy_confirmation: Are you sure? This cannot be undone!
     notes:
       not_enough_invoices: |
         You will start to see colorful statistics and graphs here
         if you have enough invoice entries saved in database.
+    alerts:
+      restricted: "You don't have access to this content"
   communities:
     edit: Edit community
     master: Community manager
@@ -49,10 +48,13 @@ en:
   invitations:
     invited_at: Kutsumise aeg
     new: Lisa kommuuniliige
-    pending_invitations: Pending invitations
     no_invitations_yet: |
       No pending invitations. You can invite a new community member from here:
-
+    pending_invitations: Pending invitations
+    revoke: Revoke
+    revoked: Invitation revoked
+    re-send: Re-send
+    share: Share
   invoices:
     title: Invoice
     invoice_nr: Invoice nr
