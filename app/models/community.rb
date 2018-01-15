@@ -13,6 +13,10 @@ class Community < ApplicationRecord
     self.master = user
   end
 
+  def master?(user)
+    self.master == User.find(user.id)
+  end
+
   def members
     self.partnerships.map { |p| p.user }
   end

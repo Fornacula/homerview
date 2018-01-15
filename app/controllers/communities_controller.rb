@@ -20,6 +20,7 @@ class CommunitiesController < ApplicationController
   def show
     @master = @community.master
     @partnerships = @community.partnerships
+    @invitations = @community.invitations
   end
 
   def update

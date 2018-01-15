@@ -20,15 +20,14 @@ et:
       show: Näita
       edit: Muuda
       destroy: Eemalda
-      back_to_communities: Tagasi kommuunide loetellu
-      back_to_invoices: Tagasi arvete loetellu
-      back_to_services: Tagasi teenuste loetellu
     destroy_confirmation: Oled sa kindel? Toimingut ei saa tagasi võtta!
     notes:
       not_enough_invoices: |
         Siin näed õige pea statistikat ja värvilisi graafikuid
         enda väljaminekute kohta, kui oled piisavalt palju
         arveid andmebaasi salvestanud.
+    alerts:
+      restricted: Sul ei ole sellele sisule ligipääsu
   communities:
     edit: Muuda kommuuni
     master: Kommuuni haldaja
@@ -48,7 +47,22 @@ et:
       x-title: Aeg
       y-title: Summa (€)
   invitations:
+    errors:
+      email_already_present: Sellise emailiga kasutaja on juba kommuuni liige
+    invited_at: Kutsumise aeg
+    join: Liitu
+    joined: Liitusid kommuuniga
     new: Lisa kommuuniliige
+    no_invitations_yet: |
+      Ootel liikmekutseid ei ole. Saad kutsuda uusi kommuuniliikmeid siit:
+    pending_invitations: Ootel liikmekutsed
+    revoke: Tühista
+    revoked: Kutse tühistatud
+    re-send: Saada uuesti
+    share: Maksete osakaal
+    unable_to_join: Kommuuniga liitumine ebaõnnestus
+    you_have_been_invited: |
+      Sind on kutsutud järgnevatesse kommuunidesse, liitumiseks vajuta 'Liitu':
   invoices:
     title: Arve
     invoice_nr: Arvenumber

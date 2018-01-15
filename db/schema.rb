@@ -42,10 +42,12 @@ ActiveRecord::Schema.define(version: 20180111184202) do
   end
 
   create_table "invitations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.decimal "share"
+    t.decimal "share", default: "0.0"
     t.string "email"
     t.uuid "community_id"
     t.uuid "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["community_id"], name: "index_invitations_on_community_id"
     t.index ["user_id"], name: "index_invitations_on_user_id"
   end

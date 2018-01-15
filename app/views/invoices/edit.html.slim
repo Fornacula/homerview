@@ -1,3 +1,10 @@
 - @title = t('invoices.edit')
 
 = render 'form', invoice: @invoice, services: @services
+
+.row
+  .column.text-right
+    = link_to invoice_path(@invoice),
+      method: :delete,
+      data: {confirm: t('general.destroy_confirmation')} do
+        button.tiny.alert= t('general.buttons.destroy')
