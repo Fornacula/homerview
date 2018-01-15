@@ -42,9 +42,12 @@ end
 
 group :development do
   gem 'better_errors'
+  gem 'bundler-audit'
+  gem 'rack-mini-profiler', require: false
   gem 'rails_best_practices'
   gem 'rubocop', '~> 0.52.0', require: false
   gem 'spring'
+  gem 'traceroute'
 end
 
 group :test do
