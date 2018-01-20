@@ -1,8 +1,10 @@
 .row
-  a.button.success.small(href="#{new_invoice_path}")= t('invoices.new')
-- if current_user.invoices.count < 2
-  .column.small-offset-0.small-12.medium-offset-1.medium-10
-    .box.center
-      h3= t('general.notes.not_enough_invoices')
-- else
-  #yearSummaryChart
+  .column
+    a.button.success.small(href="#{new_invoice_path}")= t('invoices.new')
+.row
+  .column.small-12.medium-offset-1.medium-10
+    - if current_user.invoices.count < 2
+        .box.center
+          h3= t('general.notes.not_enough_invoices')
+    - else
+      #yearSummaryChart
