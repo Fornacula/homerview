@@ -1,0 +1,24 @@
+- @title = @user.full_name
+.row
+  .column
+    = "Email: #{@user.email}"
+- if @invitations.present?
+  .row
+    .column
+      h4= t('invitations.you_have_been_invited')
+      table.hover
+        th
+        th= t('communities.name')
+        th= t('communities.master')
+        th= t('partnerships.share')
+        th
+        - c = 1
+        - @invitations.each do |i|
+          tr
+            td= c
+            td= i.community.name
+            td= i.community.master.full_name
+            td= i.share
+            td= link_to community_join_path(i.community, i), method: :post do
+                  button.tiny= t('invitations.join')
+          - c += 1

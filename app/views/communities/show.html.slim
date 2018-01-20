@@ -1,15 +1,50 @@
+- @title = "#{t('communities.title')} #{@community.name}"
 .row
   .column
-    h4="#{t('communities.title')} \"#{@community.name}\""
-    b= "#{t('general.attributes.created_at')}: #{l(@community.created_at)}"
+    h4= "#{t('communities.members')}:"
+    table.hover
+      th
+      th= t('users.name')
+      th= t('partnerships.added_at')
+      th= t('partnerships.share')
+      - c = 1
+      - @partnerships.each do |p|
+        tr
+          td= c
+          td= link_to member_name(p), user_path(p.user)
+          td= l(p.created_at)
+          td= percentify(p.share)
+        - c += 1
+.row
+  .column
+    - if @invitations.present?
+      h4= "#{t('invitations.pending_invitations')}:"
+      table.hover
+        th
+        th= t('users.email')
+        th= t('invitations.share')
+        th= t('invitations.invited_at')
+        th
+        - c = 1
+        - @invitations.each do |i|
+          tr
+            td= c
+            td= i.email
+            td= percentify(i.share)
+            td= l(i.created_at)
+            td
+              - if @community.master?(current_user)
+                = link_to community_invitation_path(@community, i),
+                          method: :delete,
+                          data: { confirm: t('general.destroy_confirmation') } do
+                            button.alert.tiny= t('invitations.revoke')
+            - c += 1
+    - else
+      - if @community.master?(current_user)
+        h4= t('invitations.no_invitations_yet')
+    - if @community.master?(current_user)
+      = link_to t('communities.invite_member'), new_community_invitation_path(@community)
 .row
   .column
     = link_to edit_community_path do
       button.warning.small= t('general.buttons.edit')
-.row
-  .column.small-4
-    = link_to communities_path do
-      button.small= t('general.buttons.back_to_communities')
-  .column.small-8.text-right
-    = link_to community_path(@community), method: :delete, data: { confirm: t('general.destroy_confirmation') } do
-      button.tiny.alert= t('general.buttons.destroy')

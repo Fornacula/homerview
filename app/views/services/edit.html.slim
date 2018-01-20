@@ -1,3 +1,10 @@
-h1= t('services.edit')
+- @title = t('services.edit')
 
 = render 'form', service: @service
+
+.row
+  .column.text-right
+    = link_to service_path(@service),
+      method: :delete,
+      data: { confirm: t('general.destroy_confirmation') } do
+        button.tiny.alert= t('general.buttons.destroy')

@@ -12,12 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
-
+//= require foundation
 //= require Chart.bundle
 //= require chartkick
 //= require rails.validations
 //= require rails.validations.simple_form
+//= require_tree .
 
 $(document).ready(function(){
   // front-end framework

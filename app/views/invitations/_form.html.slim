@@ -1,0 +1,6 @@
+= simple_form_for [community, invitation], validate: true do |f|
+  = f.input :email
+  = f.input :share
+  = f.hidden_field :community_id
+  .row
+    button.small(type='submit')= t('general.buttons.save')

@@ -1,3 +1,10 @@
-h1= t('communities.edit')
+- @title = t('communities.edit')
 
 = render 'form', community: @community
+
+.row
+  .column.text-right
+    = link_to community_path(@community),
+      method: :delete,
+      data: { confirm: t('general.destroy_confirmation') } do
+        button.tiny.alert= t('general.buttons.destroy')

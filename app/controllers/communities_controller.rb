@@ -17,6 +17,12 @@ class CommunitiesController < ApplicationController
     end
   end
 
+  def show
+    @master = @community.master
+    @partnerships = @community.partnerships
+    @invitations = @community.invitations
+  end
+
   def update
     if @community.update(community_params)
       redirect_to communities_path, notice: t('communities.successful_update')
