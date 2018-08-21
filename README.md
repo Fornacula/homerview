@@ -8,7 +8,7 @@ Project was started mainly due to personal need for such custom-made application
 ## Development setup
 
 ruby-2.5.0
-rails-5.1.4
+rails-5.1.6
 
 1. Clone the repo
 2. `bundle pack`
