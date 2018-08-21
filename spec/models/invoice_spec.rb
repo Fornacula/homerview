@@ -62,25 +62,27 @@ RSpec.describe Invoice, type: :model do
     let(:user) { create(:user) }
     let(:service1) { create(:service, name: 'Test_1') }
     let(:service2) { create(:service, name: 'Test_2') }
+    let(:date1) { Date.today - 6.months }
+    let(:date2) { Date.today - 4.months }
     let(:period_jul1) do
       build(
         :period,
-        period_start: Date.new(2017, 7, 1),
-        period_end: Date.new(2017, 7, 31)
+        period_start: date1.beginning_of_month,
+        period_end: date1.end_of_month
       )
     end
     let(:period_jul2) do
       build(
         :period,
-        period_start: Date.new(2017, 7, 1),
-        period_end: Date.new(2017, 7, 31)
+        period_start: date1.beginning_of_month,
+        period_end: date1.end_of_month
       )
     end
     let(:period_nov) do
       build(
         :period,
-        period_start: Date.new(2017, 11, 1),
-        period_end: Date.new(2017, 11, 30)
+        period_start: date2.beginning_of_month,
+        period_end: date2.end_of_month
       )
     end
     let!(:invoice1) { create(:invoice, user: user, service: service1, period: period_nov) }
@@ -92,7 +94,10 @@ RSpec.describe Invoice, type: :model do
     end
 
     it 'gives out uniq month names for user invoices in timely order' do
-      expect(Invoice.user_invoices_period_uniq_months(user)).to eq([7, 11])
+      expect(Invoice.user_invoices_period_uniq_months(user)).to eq([
+                                                                     date1.month,
+                                                                     date2.month
+                                                                   ])
     end
 
     it 'returns month names based on month numbers' do
@@ -112,7 +117,11 @@ RSpec.describe Invoice, type: :model do
       end
 
       it 'displays x-axis ticks as abbreviated month names' do
-        expect(matrix_transposed.first).to eq(%w[months Juul Nov])
+        expect(matrix_transposed.first).to eq(%W[
+                                                months
+                                                #{I18n.t('date.abbr_month_names')[date1.month]}
+                                                #{I18n.t('date.abbr_month_names')[date2.month]}
+                                              ])
       end
 
       it 'sums up service invoices (single as well as periodic at once) in one month' do
